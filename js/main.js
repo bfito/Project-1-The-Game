@@ -6,7 +6,15 @@ function Node(powerDefenseAttack) {
     this.owner = 0;
 }
 
-var nodes = [];
+var nodes = [
+		{ connectedNodes: [2, 3],    powerDefenseAttack: 3, owner: 1 },     //Node: 0
+		{ connectedNodes: [2, 4],    powerDefenseAttack: 3, owner: null },  //Node: 1
+		{ connectedNodes: [0, 1, 3], powerDefenseAttack: 3, owner: null },  //Node: 2
+		{ connectedNodes: [0, 2, 4], powerDefenseAttack: 3, owner: null },  //Node: 3
+		{ connectedNodes: [1, 3],    powerDefenseAttack: 3, owner: 2 }      //Node: 4
+	],
+
+// var nodes = [];
 
 function Game (player1Name, player2Name) {
 }
@@ -33,19 +41,25 @@ nodes[0].powerDefenseAttack = 20;
 nodes[1].powerDefenseAttack = 20;
 console.log(nodes);
 
+
+
+var id = " ";
+
  $(".node").click(function(){
-   var id = $(this).attr('id');
+   id = $(this).attr('id');
    id = parseInt(id[id.length - 1]);
   //  console.log(id);
    firstClickedNode = this.id;
   //  console.log("The firstClickedNode is " + firstClickedNode);
    checkNodesOwnership(nodes[id]);
+   checkIfNodeAdjacent();
  });
 
  function checkNodesOwnership (node) {
    if (node.owner == 1) {
     // actionNode();
     console.log("True");
+
     console.log(firstClickedNode + " is P1's");
   } else if (node.owner == 2) {
     console.log(firstClickedNode + " is P2's");
@@ -54,11 +68,9 @@ console.log(nodes);
   }
 }
 
-function checkIfNodeAdjacent (nodes, adjacent) {
-      for(var i=0; i<arr.length; i++) {
-          if (arr[i] == obj) return true;
+function checkIfNodeAdjacent () {
+  //  console.log("Testing id in other function" +  id);
 
-  }
 }
 
 function actionNode () {
