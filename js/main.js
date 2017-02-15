@@ -34,26 +34,39 @@ nodes[1].powerDefenseAttack = 20;
 console.log(nodes);
 
 
-
 function firstNodeSelected () {
-  var selectedNode;
-  if (selectedNode === nodes.owner[1]) {
-    secondNodeSelect();
-  } else {"NOTE:Nothing happens"}
+  // var selectedNode;
+  // var selectedNode = nodes.owner[2];
+  console.log("hello");
+  // if (nodes[i] === nodes.owner[1]) {
+  //   console.log("selectedNode is: " + selectedNode);
+  //   secondNodeSelect();
+  // } else {console.log("Selected node is not player1");}
 }
 
+// var i = 1;
+// selectedNode = function firstNodeSelected () {
+//   // var selectedNode;
+//   // var selectedNode = nodes.owner[2];
+//   console.log("hello");
+//   if (nodes[i] === nodes.owner[1]) {
+//     console.log("selectedNode is: " + selectedNode);
+//     secondNodeSelect();
+//   } else {console.log("Selected node is not player1");}
+// };
 
 
-function secondNodeSelect () {
-  var selectedNode;
-    checkNodeSelection();
-  if (checkNodeSelection = true && selectedNode = player1.node) {
-    sendRehiforcements();}
-  else (checkNodeSelection = true) {
-      attackNode();
-    }
-
-  }
+//
+// function secondNodeSelect () {
+//   var selectedNode;
+//     checkNodeSelection();
+//   if (checkNodeSelection === true && selectedNode = nodes[0].owner); {
+//     sendRehiforcements();}
+//   else (checkNodeSelection = true) {
+//       attackNode();
+//     }
+//
+//   }
 
 
 

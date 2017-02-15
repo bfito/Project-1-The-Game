@@ -10,6 +10,13 @@ body {
   width: 150px;*/
 }
 
+p {
+  position: absolute;
+  font-size: 100px;
+  top: 20%;
+  left: 20%;
+
+}
 /*.row {
 clear: both;
    background-color: peachpuff;
