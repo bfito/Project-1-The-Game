@@ -69,9 +69,14 @@ selectedNode = function firstNodeSelected () {
 
 
 
-function checkNodeConnection() {
-// forEach or for to run through each array...
-}
+// function checkNodeConnection() {
+//   for (var i = 0; i < nodes.length; i++) {
+//     for (var j = 0; j < nodes.connectedNodes.length; j++) {
+//       if (nodes.connectedNodes[j] == selectedNode) {}
+//       else {console.log("Is not connected");}
+//     }
+//   }
+// }
 
 
 // function reinforceNode() {
