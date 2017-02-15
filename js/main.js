@@ -43,14 +43,21 @@ console.log(nodes);
 // }
 
 
- $(".node").click(function selectedNode (node) {
+ $(".node").click(function(){
+   var id = $(this).attr('id');
+   id = parseInt(id[id.length - 1]);
+   console.log(id);
+   selectedNode(nodes[id]);
+ });
+
+ function selectedNode (node) {
    if (node.owner == 1) {
   // var selectedNode;
   // var selectedNode = nodes.owner[2];
     console.log("True");
     secondNodeSelect();
   } else {console.log("False");}
-});
+}
 
 
 //
