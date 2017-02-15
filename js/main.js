@@ -42,17 +42,15 @@ console.log(nodes);
 //   // } else {console.log("Selected node is not player1");}
 // }
 
-var i = 1;
-nodes.prototype.selectedNode = function firstNodeSelected () {
-  for ()
+
+ function selectedNode () {
+   if (node.owner == 1) {
   // var selectedNode;
   // var selectedNode = nodes.owner[2];
-
-  if (nodes[i] == nodes.owner[1]) {
-    console.log("selectedNode is: " + selectedNode);
+    console.log("True");
     secondNodeSelect();
-  } else {console.log("Selected node is not player1");}
-};
+  } else {console.log("False");}
+}
 
 
 //
