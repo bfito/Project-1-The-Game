@@ -49,35 +49,21 @@ console.log(nodes);
     console.log(firstClickedNode + " is P1's");
   } else if (node.owner == 2) {
     console.log(firstClickedNode + " is P2's");
-  } else {    
+  } else {
     console.log("This is a neutral");
   }
 }
 
+function checkIfNodeAdjacent (nodes, adjacent) {
+      for(var i=0; i<arr.length; i++) {
+          if (arr[i] == obj) return true;
+
+  }
+}
+
 function actionNode () {
-  if (checkNodesOwnership == true) {
-    console.log("True");
-
-  }
-  // if (checkNodeSelection === true && checkNodesOwnership = nodes[0].owner); {
-  //   sendRehiforcements();}
-  // else (checkNodeSelection = true) {
-  //     attackNode();
-  //   }
-
   }
 
-
-
-
-// function checkNodeConnection() {
-//   for (var i = 0; i < nodes.length; i++) {
-//     for (var j = 0; j < nodes.connectedNodes.length; j++) {
-//       if (nodes.connectedNodes[j] == checkNodesOwnership) {}
-//       else {console.log("Is not connected");}
-//     }
-//   }
-// }
 
 
 // function reinforceNode() {
