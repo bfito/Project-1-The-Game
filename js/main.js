@@ -52,25 +52,25 @@ console.log(nodes);
 
  function selectedNode (node) {
    if (node.owner == 1) {
-  // var selectedNode;
-  // var selectedNode = nodes.owner[2];
+    actionNode();
     console.log("True");
-    secondNodeSelect();
-  } else {console.log("False");}
+  } else {
+    console.log("False");
+  }  
 }
 
+function actionNode () {
+  if (selectedNode == true) {
+    console.log("True");
 
-//
-// function secondNodeSelect () {
-//   var selectedNode;
-//     checkNodeSelection();
-//   if (checkNodeSelection === true && selectedNode = nodes[0].owner); {
-//     sendRehiforcements();}
-//   else (checkNodeSelection = true) {
-//       attackNode();
-//     }
-//
-//   }
+  }
+  // if (checkNodeSelection === true && selectedNode = nodes[0].owner); {
+  //   sendRehiforcements();}
+  // else (checkNodeSelection = true) {
+  //     attackNode();
+  //   }
+
+  }
 
 
 
