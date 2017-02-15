@@ -43,7 +43,8 @@ console.log(nodes);
 // }
 
 var i = 1;
-selectedNode = function firstNodeSelected () {
+nodes.prototype.selectedNode = function firstNodeSelected () {
+  for ()
   // var selectedNode;
   // var selectedNode = nodes.owner[2];
 
