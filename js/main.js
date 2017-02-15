@@ -42,21 +42,24 @@ console.log(nodes);
 //   // } else {console.log("Selected node is not player1");}
 // }
 
-
  $(".node").click(function(){
    var id = $(this).attr('id');
    id = parseInt(id[id.length - 1]);
    console.log(id);
+   focusNode = this.id;
+   console.log("The focusNode is " + focusNode);
    selectedNode(nodes[id]);
  });
 
  function selectedNode (node) {
    if (node.owner == 1) {
-    actionNode();
+    // actionNode();
     console.log("True");
+    console.log(focusNode + " is P1's");
   } else {
     console.log("False");
-  }  
+  }
+
 }
 
 function actionNode () {
