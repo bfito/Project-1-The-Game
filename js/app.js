@@ -5,11 +5,11 @@ $(document).ready(function () {
 var targetNode;
 var attackerNode;
 
-function printID(e) {
-  e = e || window.event;
-  e = e.target || e.srcElement;
-  console.log("ID: " + e.id);
-}
+// function printID(e) {
+//   e = e || window.event;
+//   e = e.target || e.srcElement;
+//   console.log("ID: " + e.id);
+// }
 // ********************************************************
 // COUNTER WHICH IS THE AMOUNT OF Resistance OR AttackPower
 // var counter = 0;

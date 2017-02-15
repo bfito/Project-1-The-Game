@@ -27,7 +27,7 @@ clear: both;
 }
 
 
-.cellBox {
+.nodeBox {
   float: left;
   border: 1px solid white;
   padding: 10px;
@@ -38,7 +38,7 @@ clear: both;
   line-height: 87px;
 }*/
 
-.cell {
+.node {
   border: 1px solid indigo;
   border-radius: 50%;
   width: 500px;
@@ -46,46 +46,46 @@ clear: both;
   color: black;
 }
 
-.cell-neutral {
+.node-neutral {
   /*border-color: green;*/
   background-color: grey;
 }
 
-.cell-player-1 {
+.node-player-1 {
   /*border-color: green;*/
   background-color: green;
 }
 
-.cell-player-2 {
+.node-player-2 {
   /*border-color: red;*/
   background-color: red;
 }
 
-#cell-0 {
+#node-0 {
   position: absolute;
   top: 60%;
   left: 10%;
 }
 
-#cell-1 {
+#node-1 {
   position: absolute;
   top: 30%;
   left: 80%;
 }
 
-#cell-2 {
+#node-2 {
   position: absolute;
   top: 10%;
   left: 30%;
 }
 
-#cell-3 {
+#node-3 {
   position: absolute;
   top: 50%;
   left: 40%;
 }
 
-#cell-4 {
+#node-4 {
   position: absolute;
   top: 70%;
   left: 60%;
