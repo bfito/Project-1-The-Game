@@ -1,26 +1,9 @@
 // console.log("Testing");
 
-// function Node(row, column, number, owner) {
-//     this.row = row;
-//     this.col = column;
-//     this.number = number;    // Defense/Firewall
-//     this.owner = owner;
-//
-//     // this.counter = counter;
-//     // IF NODE IS NOT OCCUPIED = 0
-//     // IF NODE IS OCCUPIED BY PLAYER1 = 1
-//     // IF NODE IS OCCUPIED BY PLAYER2 = 2
-// }
-
-function Node(firePower) {
+function Node(powerDefenseAttack) {
     this.connectedNodes = [];
-    this.firePower = firePower;
+    this.powerDefenseAttack = powerDefenseAttack;
     this.owner = 0;
-
-    // this.counter = counter;
-    // IF NODE IS NOT OCCUPIED = 0
-    // IF NODE IS OCCUPIED BY PLAYER1 = 1
-    // IF NODE IS OCCUPIED BY PLAYER2 = 2
 }
 
 var nodes = [];
@@ -42,74 +25,48 @@ nodes[4].connectedNodes = [1, 3];
 
 nodes[0].owner = 1; // player1
 nodes[1].owner = 2; // player2
+nodes[2].owner = null; // null
+nodes[3].owner = null; // null
+nodes[4].owner = null; // null
 
-nodes[0].firePower = 20;
-nodes[1].firePower = 20;
+nodes[0].powerDefenseAttack = 20;
+nodes[1].powerDefenseAttack = 20;
 console.log(nodes);
 
-// this.board = [
-//   [ neutral1, neutral2],
-//   [ player1, null]
-// ];
 
 
-// }
+function firstNodeSelected () {
+  var selectedNode;
+  if (selectedNode === nodes.owner[1]) {
+    secondNodeSelect();
+  } else {"NOTE:Nothing happens"}
+}
 
 
-Game.prototype.takeOver = function (targetRow, targetCol, attackerRow, attackerCol) {
-  var targetNode = this.board[targetRow][targetCol];
-  var attackerNode = this.board[attackerRow][attackerCol];
 
-  if (targetNode.owner === null) {
-// ATTACK CODE
-    targetNode.number =  attackerNode.number - targetNode.number;
-    attackerNode.number = 0;
-    targetNode.owner = attackerNode.owner;
-  } else if (theNode.owner === 1) {
-    // Player1's node
-  } else {
-    // Player2's node
+function secondNodeSelect () {
+  var selectedNode;
+    checkNodeSelection();
+  if (checkNodeSelection = true && selectedNode = player1.node) {
+    sendRehiforcements();}
+  else (checkNodeSelection = true) {
+      attackNode();
+    }
+
   }
-};
 
-function Attack () {
+
+
+
+function checkNodeConnection() {
 
 }
 
-// this.player1 = player1Name;
-// this.player2 = player2Name;
-// this.winner = null;
+
+// function reinforceNode() {
+// }
+
+
+// function attackNode () {
 //
-//   // 50/50(ish) chance for either player to start
-//   if (Math.random() < 0.5) {
-//     this.currentPlayer = this.player1;
-//     } else {
-//     this.currentPlayer = this.player2;
-//   }
-// }
-
-// ************************************************************
-// WHERE PLAYER STARTS. WILL BE FIXED FOR NOW.CONNECTFOUR CODE.
-// var playerPositionFound = this.board[x][y];
-
-
-// for (var i = (this.board.length - 1); i >= 0; i -= 1) {
-//   if (this.board[i][columnNumber] === null) {
-//     playerPositionFound = i;
-//     break;
-//   }
-// }
-//
-// if (this.currentPlayer === this.player1) {
-//   this.board[playerPositionFound][columnNumber] = 1;
-//   this.currentPlayer = this.player2;
-// } else {
-//   this.board[playerPositionFound][columnNumber] = 2;
-//   this.currentPlayer = this.player1;
-// }
-// *****************************************************
-
-// "OWNERSHIP OF NODE"
-// function OwnershipOfNode () {
-//   if (Node.owner )
 // }
