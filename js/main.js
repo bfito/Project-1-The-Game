@@ -29,6 +29,7 @@ var firstClickedNode;
     firstClickedNode = id;
     console.log("The firstClickedNode is " + "node" + firstClickedNode);
   } else {
+    // checkIfNodeAdjacent();
     secondClickedNode = id;
     console.log("secondClickedNode is " + "node" + secondClickedNode);
   }
@@ -49,7 +50,6 @@ function checkForFirstOrSecondClick() {
    if (node.owner == 1) {
     // actionNode();
     console.log("True");
-
     console.log(firstClickedNode + " is P1's");
   } else if (node.owner == 2) {
     console.log(firstClickedNode + " is P2's");
@@ -61,12 +61,14 @@ function checkForFirstOrSecondClick() {
 function checkIfNodeAdjacent () {
   // console.log('testing checkIfNodeAdjacent is' +   firstClickedNode);
   i = firstClickedNode;
-  j = i;
+  j = secondClickedNode;
   // console.log(i);
-  console.log(nodes[i].connectedNodes[0]);
-if (nodes[i].connectedNodes[0] === nodes[j].connectedNodes[0]) {
-console.log("Exito!");
-}
+  console.log('firstClickedNode is ' + nodes[i].connectedNodes[0]);
+  console.log('secondClickedNode is ' + nodes[j].connectedNodes[0]);
+
+// if (nodes[i].connectedNodes[0] === nodes[j].connectedNodes[0]) {
+// console.log("Exito!");
+// }
 }
 
 function actionNode () {
