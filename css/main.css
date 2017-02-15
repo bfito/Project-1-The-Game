@@ -1,0 +1,157 @@
+body {
+  background-color: #;
+  color: #fff;
+}
+
+.container {
+  /*background-color: red;
+  margin: 50% 50%;
+  height: 150px;
+  width: 150px;*/
+}
+
+/*.row {
+clear: both;
+   background-color: peachpuff;
+    height: 70px;
+    width: 120px;
+    padding: 1px;
+    margin: auto;
+}
+
+
+.cellBox {
+  float: left;
+  border: 1px solid white;
+  padding: 10px;
+  width: 110px;
+  height: 110px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 87px;
+}*/
+
+.cell {
+  border: 1px solid indigo;
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  color: black;
+}
+
+.cell-neutral {
+  /*border-color: green;*/
+  background-color: grey;
+}
+
+.cell-player-1 {
+  /*border-color: green;*/
+  background-color: green;
+}
+
+.cell-player-2 {
+  /*border-color: red;*/
+  background-color: red;
+}
+
+#cell-0 {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+}
+
+#cell-1 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+}
+
+#cell-2 {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+}
+
+#cell-3 {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+#cell-4 {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+}
+
+.line {
+  position: absolute;
+  background-color: black;
+  width: 5px;
+  style: dotted;
+}
+
+#line-a {
+  position: absolute;
+  top: 23%;
+  left: 24%;
+  height: 41%;
+
+  transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+}
+
+#line-a {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  height: 100px;
+
+  transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+}
+#line-b {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  height: 100px;
+
+  transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+
+}
+#line-c {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  height: 100px;
+
+  transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+
+}
+#line-d {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  height: 100px;
+
+  transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+
+}
+#line-e {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  height: 100px;
+
+  transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+}
