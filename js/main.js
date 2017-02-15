@@ -33,15 +33,6 @@ nodes[0].powerDefenseAttack = 20;
 nodes[1].powerDefenseAttack = 20;
 console.log(nodes);
 
-
-// function firstNodeSelected () {
-//   console.log("hello");
-//   // if (nodes[i] === nodes.owner[1]) {
-//   //   console.log("selectedNode is: " + selectedNode);
-//   //   secondNodeSelect();
-//   // } else {console.log("Selected node is not player1");}
-// }
-
  $(".node").click(function(){
    var id = $(this).attr('id');
    id = parseInt(id[id.length - 1]);
@@ -59,7 +50,6 @@ console.log(nodes);
   } else {
     console.log("False");
   }
-
 }
 
 function actionNode () {
