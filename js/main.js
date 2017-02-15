@@ -1,5 +1,4 @@
 // console.log("Testing");
-
 function Node(powerDefenseAttack) {
     this.connectedNodes = [];
     this.powerDefenseAttack = powerDefenseAttack;
@@ -16,12 +15,10 @@ var nodes = [
 
 // var nodes = [];
 
-function Game (player1Name, player2Name) {
-}
 
-console.log(nodes);
+console.log(nodes);;
 for (var i = 0; i < 5; i += 1) {
-  var node = new Node (3, 0);
+    var node = new Node (3, 0);
   nodes.push(node);
 }
 
