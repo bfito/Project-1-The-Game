@@ -39,10 +39,10 @@ console.log(nodes);
    console.log(id);
    focusNode = this.id;
    console.log("The focusNode is " + focusNode);
-   selectedNode(nodes[id]);
+   checkNodesOwnership(nodes[id]);
  });
 
- function selectedNode (node) {
+ function checkNodesOwnership (node) {
    if (node.owner == 1) {
     // actionNode();
     console.log("True");
@@ -53,11 +53,11 @@ console.log(nodes);
 }
 
 function actionNode () {
-  if (selectedNode == true) {
+  if (checkNodesOwnership == true) {
     console.log("True");
 
   }
-  // if (checkNodeSelection === true && selectedNode = nodes[0].owner); {
+  // if (checkNodeSelection === true && checkNodesOwnership = nodes[0].owner); {
   //   sendRehiforcements();}
   // else (checkNodeSelection = true) {
   //     attackNode();
@@ -71,7 +71,7 @@ function actionNode () {
 // function checkNodeConnection() {
 //   for (var i = 0; i < nodes.length; i++) {
 //     for (var j = 0; j < nodes.connectedNodes.length; j++) {
-//       if (nodes.connectedNodes[j] == selectedNode) {}
+//       if (nodes.connectedNodes[j] == checkNodesOwnership) {}
 //       else {console.log("Is not connected");}
 //     }
 //   }
