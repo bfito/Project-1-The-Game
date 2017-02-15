@@ -36,9 +36,9 @@ console.log(nodes);
  $(".node").click(function(){
    var id = $(this).attr('id');
    id = parseInt(id[id.length - 1]);
-   console.log(id);
-   focusNode = this.id;
-   console.log("The focusNode is " + focusNode);
+  //  console.log(id);
+   firstClickedNode = this.id;
+  //  console.log("The firstClickedNode is " + firstClickedNode);
    checkNodesOwnership(nodes[id]);
  });
 
@@ -46,9 +46,11 @@ console.log(nodes);
    if (node.owner == 1) {
     // actionNode();
     console.log("True");
-    console.log(focusNode + " is P1's");
-  } else {
-    console.log("False");
+    console.log(firstClickedNode + " is P1's");
+  } else if (node.owner == 2) {
+    console.log(firstClickedNode + " is P2's");
+  } else {    
+    console.log("This is a neutral");
   }
 }
 
