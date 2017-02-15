@@ -11,46 +11,39 @@ var nodes = [
 		{ connectedNodes: [0, 1, 3], powerDefenseAttack: 3, owner: null },  //Node: 2
 		{ connectedNodes: [0, 2, 4], powerDefenseAttack: 3, owner: null },  //Node: 3
 		{ connectedNodes: [1, 3],    powerDefenseAttack: 3, owner: 2 }      //Node: 4
-	],
-
-// var nodes = [];
+	];
 
 
-console.log(nodes);;
-for (var i = 0; i < 5; i += 1) {
-    var node = new Node (3, 0);
-  nodes.push(node);
-}
-
-nodes[0].connectedNodes = [2, 3];
-nodes[1].connectedNodes = [2, 4];
-nodes[2].connectedNodes = [0, 1, 3];
-nodes[3].connectedNodes = [0, 2, 4];
-nodes[4].connectedNodes = [1, 3];
-
-nodes[0].owner = 1; // player1
-nodes[1].owner = 2; // player2
-nodes[2].owner = null; // null
-nodes[3].owner = null; // null
-nodes[4].owner = null; // null
-
-nodes[0].powerDefenseAttack = 20;
-nodes[1].powerDefenseAttack = 20;
 console.log(nodes);
 
 
 
 var id = " ";
+var firstClickedNode;
 
  $(".node").click(function(){
    id = $(this).attr('id');
    id = parseInt(id[id.length - 1]);
-  //  console.log(id);
-   firstClickedNode = this.id;
-  //  console.log("The firstClickedNode is " + firstClickedNode);
+  //  console.log('parsedid is '+id);
+  if(checkForFirstOrSecondClick() === true){
+    firstClickedNode = id;
+    console.log("The firstClickedNode is " + "node" + firstClickedNode);
+  } else {
+    secondClickedNode = id;
+    console.log("secondClickedNode is " + "node" + secondClickedNode);
+  }
    checkNodesOwnership(nodes[id]);
-   checkIfNodeAdjacent();
+  //  checkIfNodeAdjacent();
  });
+
+function checkForFirstOrSecondClick() {
+  if (firstClickedNode !== undefined) {
+    return false;
+  }
+  else {
+    return true;
+  }
+}
 
  function checkNodesOwnership (node) {
    if (node.owner == 1) {
@@ -66,8 +59,14 @@ var id = " ";
 }
 
 function checkIfNodeAdjacent () {
-  //  console.log("Testing id in other function" +  id);
-
+  // console.log('testing checkIfNodeAdjacent is' +   firstClickedNode);
+  i = firstClickedNode;
+  j = i;
+  // console.log(i);
+  console.log(nodes[i].connectedNodes[0]);
+if (nodes[i].connectedNodes[0] === nodes[j].connectedNodes[0]) {
+console.log("Exito!");
+}
 }
 
 function actionNode () {
