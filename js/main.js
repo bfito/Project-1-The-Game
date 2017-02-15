@@ -63,13 +63,20 @@ function checkIfNodeAdjacent () {
   i = firstClickedNode;
   j = secondClickedNode;
   // console.log(i);
-  console.log('firstClickedNode is ' + nodes[i].connectedNodes[0]);
-  console.log('secondClickedNode is ' + nodes[j].connectedNodes[0]);
-
-// if (nodes[i].connectedNodes[0] === nodes[j].connectedNodes[0]) {
-// console.log("Exito!");
-// }
+  for (var x = 0; x < nodes[i].connectedNodes.length - 1; x++) {
+    if (nodes[i].connectedNodes[x] === j) {
+      console.log("Node-"+ i + " is adjacent to " + "Node-" + j);
+      return true;
+    } else {
+      console.log("Node-"+ i + " is not adjacent to " + "Node-" + j);
+      return false;
+    }
+  }
+  // console.log('Node-'+i+' is connected to ' + nodes[i].connectedNodes[0] + ' & ' + nodes[i].connectedNodes[1]);
+  // console.log('second Clicked Node is node-' + j + 'which is connected to node' nodes[j].connectedNodes[0] );
+  // console.log("Exito!");
 }
+
 
 function actionNode () {
   }
