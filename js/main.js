@@ -91,33 +91,35 @@ function actionNode () {
 
     if (friendOrFoe === true) {
       attackResult = nodes[secondClickedNode].powerDefenseAttack + nodes[firstClickedNode].powerDefenseAttack;
+      console.log("Reinforcements have arrived!");
 
     } else if (friendOrFoe === false) {
+      attackResult = nodes[secondClickedNode].powerDefenseAttack - nodes[firstClickedNode].powerDefenseAttack;
 
       if (attackResult < 0) {
         var updatePowerDefenseAttack;
         updatePowerDefenseAttack = attackResult * -1;
         // console.log(updatePowerDefenseAttack);
         secondClickedNode.owner = firstClickedNode.owner;
-        // console.log("Node-"+secondClickedNode+" belongs to node-" + firstClickedNode);
-      }
+        console.log("Node-"+secondClickedNode+" belongs to node-" + firstClickedNode);
 
-    } else {
-      secondClickedNode = secondClickedNode;
-      console.log("Node-"+secondClickedNode+" is still Node-" + secondClickedNode);
+      } else {
+        secondClickedNode = secondClickedNode;
+        console.log("Node-"+secondClickedNode+" is still Node-" + secondClickedNode);
+    }
   }
 }
 
-function friendOrFoe () {
+var friendOrFoe = function friendOrFoe () {
   if (  firstClickedNode.owner === secondClickedNode.owner) {
     return true;
     // true if second clicked node belongs to same owner
   } else {
     return false;
-    // false if second node is neutral or enemy 
+    // false if second node is neutral or enemy
 
   }
-}
+};
 
 
 
