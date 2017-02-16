@@ -1,7 +1,44 @@
-body {
-  background-color: #;
-  color: #fff;
+html,
+body,
+svg {
+  height: 100%;
 }
+
+/*.node {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  border-radius: 50%;
+  position: absolute;
+  font-size: 40px;
+  text-align: center;
+}*/
+
+/*#node1 {
+  right: 20%;
+  top: 30%;
+}
+
+#node2 {
+  left: 20%;
+  bottom: 30%;
+}
+
+#node3 {
+  right: 50%;
+  top: 35%;
+}*/
+
+svg {
+  width: 100%;
+}
+
+line {
+  stroke: #000;
+  stroke-width: 5;
+}
+
+/*********************************************/
 
 .container {
   /*background-color: red;
@@ -117,7 +154,7 @@ clear: both;
   -ms-transform: rotate(120deg);
 }
 
-#line-a {
+/*#line-a {
   position: absolute;
   top: 60%;
   left: 10%;
@@ -126,7 +163,7 @@ clear: both;
   transform: rotate(120deg);
   -webkit-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
-}
+}*/
 #line-b {
   position: absolute;
   top: 30%;

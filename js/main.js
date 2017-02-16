@@ -146,32 +146,27 @@ function actionNode () {
         console.log("Node-"+secondClickedNode+" is still Node-" + secondClickedNode);
         nodes[secondClickedNode].powerDefenseAttack = attackResult;
         nodes[firstClickedNode].powerDefenseAttack = 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
   }
-
   console.log(nodes[secondClickedNode]);
   console.log(nodes[firstClickedNode]);
 }
+
+
+
+function drawLine (firstNode, secondNode) {
+  console.log(firstNode, secondNode);
+  var pos1 = $('#node' + firstNode).position();
+  var pos2 = $('#node' + secondNode).position();
+  var lineId = 'line' + firstNode + '-' + secondNode;
+
+  $('#' + lineId)
+    .attr('x1', pos1.left + 40)
+    .attr('y1', pos1.top + 40)
+    .attr('x2', pos2.left + 40)
+    .attr('y2', pos2.top + 40);
+}
+
+drawLine(4, 1);
+drawLine(4, 2);
+drawLine(2, 3);
