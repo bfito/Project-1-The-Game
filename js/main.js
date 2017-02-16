@@ -6,8 +6,8 @@ function Node(powerDefenseAttack) {
 }
 
 var nodes = [
-		{ connectedNodes: [2, 3],    powerDefenseAttack: 3, owner: 1 },     //Node: 0
-		{ connectedNodes: [2, 4],    powerDefenseAttack: 3, owner: null },  //Node: 1
+		{ connectedNodes: [2, 3],    powerDefenseAttack: 20, owner: 1 },     //Node: 0
+		{ connectedNodes: [2, 4],    powerDefenseAttack: 20, owner: null },  //Node: 1
 		{ connectedNodes: [0, 1, 3], powerDefenseAttack: 3, owner: null },  //Node: 2
 		{ connectedNodes: [0, 2, 4], powerDefenseAttack: 3, owner: null },  //Node: 3
 		{ connectedNodes: [1, 3],    powerDefenseAttack: 3, owner: 2 }      //Node: 4
@@ -31,7 +31,6 @@ var firstClickedNode;
   } else {
     // checkIfNodeAdjacent();
     secondClickedNode = id;
-    checkIfNodeAdjacent();
     console.log("secondClickedNode is " + "node" + secondClickedNode);
   }
    checkNodesOwnership(nodes[id]);
@@ -80,6 +79,10 @@ function checkIfNodeAdjacent () {
 
 
 function actionNode () {
+  // console.log(secondClickedNode);
+  // console.log(nodes[secondClickedNode]);
+  console.log(nodes[secondClickedNode].powerDefenseAttack);
+
   }
 
 
