@@ -101,7 +101,7 @@ function actionNode () {
         secondClickedNode.owner = firstClickedNode.owner;
         // console.log("Node-"+secondClickedNode+" belongs to node-" + firstClickedNode);
       }
-      
+
     } else {
       secondClickedNode = secondClickedNode;
       console.log("Node-"+secondClickedNode+" is still Node-" + secondClickedNode);
@@ -111,8 +111,11 @@ function actionNode () {
 function friendOrFoe () {
   if (  firstClickedNode.owner === secondClickedNode.owner) {
     return true;
+    // true if second clicked node belongs to same owner
   } else {
     return false;
+    // false if second node is neutral or enemy 
+
   }
 }
 
