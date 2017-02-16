@@ -81,7 +81,10 @@ function checkIfNodeAdjacent () {
 function actionNode () {
   // console.log(secondClickedNode);
   // console.log(nodes[secondClickedNode]);
-  console.log(nodes[secondClickedNode].powerDefenseAttack);
+  // console.log(nodes[secondClickedNode].powerDefenseAttack);
+  // console.log("Node-"+secondClickedNode+" has this much power "+nodes[secondClickedNode].powerDefenseAttack);
+  var attackResult = nodes[secondClickedNode].powerDefenseAttack - nodes[firstClickedNode].powerDefenseAttack;
+  console.log(attackResult);
 
   }
 
