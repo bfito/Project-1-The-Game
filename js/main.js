@@ -6,11 +6,11 @@ function Node(powerDefenseAttack) {
 }
 
 var nodes = [
-		{ connectedNodes: [1, 2],    powerDefenseAttack: 20, owner: 1 },     //Node: 0
-		{ connectedNodes: [0, 2, 4],    powerDefenseAttack: 20, owner: null },  //Node: 1
-		{ connectedNodes: [0, 1, 3], powerDefenseAttack: 3, owner: null },  //Node: 2
-		{ connectedNodes: [2, 4], powerDefenseAttack: 3, owner: null },  //Node: 3
-		{ connectedNodes: [1, 3],    powerDefenseAttack: 3, owner: 2 }      //Node: 4
+		{ connectedNodes: [1, 2],    powerDefenseAttack: 0, owner: 1 },     //Node: 0
+		{ connectedNodes: [0, 2, 4],    powerDefenseAttack: 3, owner: null },  //Node: 1
+		{ connectedNodes: [0, 1, 3], powerDefenseAttack: 8, owner: null },  //Node: 2
+		{ connectedNodes: [2, 4], powerDefenseAttack: 5, owner: null },  //Node: 3
+		{ connectedNodes: [1, 3],    powerDefenseAttack: 0, owner: 2 }      //Node: 4
 	];
 
 updateHtmlPowerDefenseAttack();
@@ -28,7 +28,7 @@ ResistanceAttackPowerCounter();
         }
       }
       updateHtmlPowerDefenseAttack();
-      console.log(nodes[0].powerDefenseAttack);
+      // console.log(nodes[0].powerDefenseAttack);
 
         // counter = counter + 1;
         // document.getElementById("cell-1").innerHTML =  counter;

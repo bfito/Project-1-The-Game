@@ -206,4 +206,19 @@ clear: both;
   transform: rotate(120deg);
   -webkit-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
-}*/
+}
+
+.stroke-1 {
+  stroke: red;
+  stroke-dasharray: 0;
+}
+
+.stroke-2 {
+  stroke: yellow;
+  stroke-dasharray: 2;
+}
+
+.stroke-3 {
+  stroke: green;
+  stroke-dasharray: 5;
+}
