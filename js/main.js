@@ -103,38 +103,64 @@ var isNodeAlly = function () {
 
 function actionNode () {
   // console.log(secondClickedNode);
-  // console.log(nodes[secondClickedNode]);
+  console.log(nodes[secondClickedNode]);
+  console.log(nodes[firstClickedNode]);
   // console.log(nodes[secondClickedNode].powerDefenseAttack);
   // console.log("Node-"+secondClickedNode+" has this much power "+nodes[secondClickedNode].powerDefenseAttack);
-  // var attackResult = nodes[secondClickedNode].powerDefenseAttack - nodes[firstClickedNode].powerDefenseAttack;
-  // console.log(attackResult);
+  var attackResult = nodes[secondClickedNode].powerDefenseAttack - nodes[firstClickedNode].powerDefenseAttack;
+  console.log(attackResult);
   // nodes[secondClickedNode].powerDefenseAttack = attackResult;
   // console.log(nodes[secondClickedNode].powerDefenseAttack);
 
 
-    if (isNodeAlly === true) {
+    if (isNodeAlly() === true) {
       //
       // var attackResult;
       // var updatePowerDefenseAttack;
-      attackResult = nodes[secondClickedNode].powerDefenseAttack + nodes[firstClickedNode].powerDefenseAttack;
       console.log("Reinforcements have arrived!");
       return attackResult;
 
-    } else if (isNodeAlly === false) {
-      attackResult = nodes[secondClickedNode].powerDefenseAttack - nodes[firstClickedNode].powerDefenseAttack;
-
-      if (this.attackResult < 0) {
+    } else if (isNodeAlly() === false) {
+      if (attackResult < 0) {
         updatePowerDefenseAttack = attackResult * -1;
         // console.log(updatePowerDefenseAttack);
-        secondClickedNode.owner = firstClickedNode.owner;
+        nodes[secondClickedNode].owner = nodes[firstClickedNode].owner;
+        nodes[secondClickedNode].powerDefenseAttack = updatePowerDefenseAttack;
+        nodes[firstClickedNode].powerDefenseAttack = 0;
+
         console.log("Node-"+secondClickedNode+" belongs to node-" + firstClickedNode);
-        return attackResult;
+        // return attackResult;
 
       } else {
-        secondClickedNode = secondClickedNode;
         console.log("Node-"+secondClickedNode+" is still Node-" + secondClickedNode);
+        nodes[secondClickedNode].powerDefenseAttack = attackResult;
+        nodes[firstClickedNode].powerDefenseAttack = 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
   }
+
+  console.log(nodes[secondClickedNode]);
+  console.log(nodes[firstClickedNode]);
 }
