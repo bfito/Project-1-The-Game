@@ -13,7 +13,11 @@ var nodes = [
 		{ connectedNodes: [1, 3],    powerDefenseAttack: 3, owner: 2 }      //Node: 4
 	];
 
+  <p id="demo"></p>
 
+  <script>
+  document.getElementById("demo").innerHTML = 5 + 6;
+  </script>
 console.log(nodes);
 
 
@@ -121,16 +125,3 @@ function actionNode () {
     }
   }
 }
-
-
-
-
-
-
-// function reinforceNode() {
-// }
-
-
-// function attackNode () {
-//
-// }
