@@ -6,10 +6,10 @@ function Node(powerDefenseAttack) {
 }
 
 var nodes = [
-		{ connectedNodes: [2, 3],    powerDefenseAttack: 20, owner: 1 },     //Node: 0
-		{ connectedNodes: [2, 4],    powerDefenseAttack: 20, owner: null },  //Node: 1
+		{ connectedNodes: [1, 2],    powerDefenseAttack: 20, owner: 1 },     //Node: 0
+		{ connectedNodes: [0, 2, 4],    powerDefenseAttack: 20, owner: null },  //Node: 1
 		{ connectedNodes: [0, 1, 3], powerDefenseAttack: 3, owner: null },  //Node: 2
-		{ connectedNodes: [0, 2, 4], powerDefenseAttack: 3, owner: null },  //Node: 3
+		{ connectedNodes: [2, 4], powerDefenseAttack: 3, owner: null },  //Node: 3
 		{ connectedNodes: [1, 3],    powerDefenseAttack: 3, owner: 2 }      //Node: 4
 	];
 
@@ -33,16 +33,23 @@ var secondClickedNode;
 
  $(".node").click(function(){
    id = $(this).attr('id');
-  //  id = parseInt(id[id.length - 1]);
+   id = parseInt(id);
   //  console.log('parsedid is '+id);
   if(checkForFirstOrSecondClick() === true){
     firstClickedNode = id;
     console.log("first clicked node is: " + firstClickedNode);
     console.log("The firstClickedNode is " + "node" + firstClickedNode);
   } else {
-    // checkIfNodeAdjacent();
     secondClickedNode = id;
-    console.log("secondClickedNode is " + "node" + secondClickedNode);
+
+    if (checkIfNodeAdjacent() === true) {
+      console.log("secondClickedNode is " + "node" + secondClickedNode);
+      actionNode();
+      firstClickedNode = undefined;
+    } else {
+      firstClickedNode = id;
+    }
+    secondClickedNode = undefined;
   }
    checkNodesOwnership(nodes[id]);
   //  checkIfNodeAdjacent();
@@ -71,8 +78,10 @@ function checkForFirstOrSecondClick() {
 
 function checkIfNodeAdjacent () {
   // console.log('testing checkIfNodeAdjacent is' +   firstClickedNode);
-  i = firstClickedNode;
-  j = secondClickedNode;
+  var i = firstClickedNode;
+  var j = secondClickedNode;
+  console.log(nodes[i].connectedNodes, j);
+
   // console.log(i);
   for (var x = 0; x < nodes[i].connectedNodes.length - 1; x++) {
     if (nodes[i].connectedNodes[x] === j) {
@@ -80,12 +89,14 @@ function checkIfNodeAdjacent () {
       return true;
     } else {
       console.log("Node-"+ i + " is not adjacent to " + "Node-" + j);
-      return false;
     }
   }
   // console.log('Node-'+i+' is connected to ' + nodes[i].connectedNodes[0] + ' & ' + nodes[i].connectedNodes[1]);
   // console.log('second Clicked Node is node-' + j + 'which is connected to node' nodes[j].connectedNodes[0] );
   // console.log("Exito!");
+
+  return false;
+  // Return false was breaking the the loop and not getting go through the whole array. We placed the return false out of the loop but it still in the function.
 }
 
 var isNodeAlly = function () {
