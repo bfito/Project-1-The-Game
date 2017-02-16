@@ -34,9 +34,7 @@ var secondClickedNode;
   //   firstClickedNode = id;
   //   alert("Select another node/computer");
 
-// } else if (checkIfNodeAdjacent() === true) {
-} else {
-
+} else if (checkIfNodeAdjacent() === true && firstClickedNode !== firstClickedNode) {
   // } else if (checkIfNodeAdjacent() === true) {
     secondClickedNode = id;
     console.log("secondClickedNode is " + "node" + secondClickedNode);
@@ -69,21 +67,16 @@ function checkIfNodeAdjacent () {
   // console.log('testing checkIfNodeAdjacent is' +   firstClickedNode);
   i = firstClickedNode;
   j = secondClickedNode;
-  console.log("i is " + i);
-  console.log("j is " + j);
-    // for (var x = 0; x < nodes[i].connectedNodes.length - 1; x++) {
-  // console.log('firstClickedNode is ' + nodes[i].connectedNodes[0]);
-  // console.log('secondClickedNode is ' + nodes[j].connectedNodes[0]);
-    // if (nodes[i].connectedNodes[x] === j) {
-  	  // console.log("Node-"+ i + " is adjacent to " + "Node-" + j);
-    // if (nodes[i].connectedNodes[x] === nodes[j].connectedNodes[x]) {
-    //   console.log("Exito!");
-    //   return true;
-    // } else {
-    //   console.log("Node-"+ i + " is not adjacent to " + "Node-" + j);
-    //   return false;
-  //  }
- // }
+  // console.log(i);
+  for (var x = 0; x < nodes[i].connectedNodes.length - 1; x++) {
+    if (nodes[i].connectedNodes[x] === j) {
+      console.log("Node-"+ i + " is adjacent to " + "Node-" + j);
+      return true;
+    } else {
+      console.log("Node-"+ i + " is not adjacent to " + "Node-" + j);
+      return false;
+    }
+  }
   // console.log('Node-'+i+' is connected to ' + nodes[i].connectedNodes[0] + ' & ' + nodes[i].connectedNodes[1]);
   // console.log('second Clicked Node is node-' + j + 'which is connected to node' nodes[j].connectedNodes[0] );
   // console.log("Exito!");
