@@ -25,19 +25,17 @@ var firstClickedNode;
    id = $(this).attr('id');
    id = parseInt(id[id.length - 1]);
   //  console.log('parsedid is '+id);
-  if(checkForFirstOrSecondClick() === true){
+  if(checkForFirstClick() === true){
     firstClickedNode = id;
-    console.log("The firstClickedNode is " + "node" + firstClickedNode);
-  } else {
-    // checkIfNodeAdjacent();
+    // console.log("The firstClickedNode is " + "node" + firstClickedNode);
+  } else if (checkIfNodeAdjacent() === true) {
     secondClickedNode = id;
-    console.log("secondClickedNode is " + "node" + secondClickedNode);
-  }
+    // console.log("secondClickedNode is " + "node" + secondClickedNode);
+    }
    checkNodesOwnership(nodes[id]);
-  //  checkIfNodeAdjacent();
- });
+});
 
-function checkForFirstOrSecondClick() {
+function checkForFirstClick() {
   if (firstClickedNode !== undefined) {
     return false;
   }
