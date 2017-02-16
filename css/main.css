@@ -105,12 +105,23 @@ clear: both;
   background-color: red;
 }
 
-.node-0 {
+.node-0, .node-1, .node-2, .node-3, .node-4 {
   position: absolute;
   top: 60%;
   left: 10%;
+  border: 16px solid black;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  border-radius: 50%;
+  /* stroke-dasharray: 27; */
+  border-style: dashed;
 }
 
+.node-0 img, .node-1  img, .node-2 img, .node-3 img, .node-4 img {
+  position: relative;
+  top: 25px;
+}
 
 .node-1 {
   position: absolute;
@@ -143,7 +154,7 @@ clear: both;
   style: dotted;
 }
 
-/*#line-a {
+#line-a {
   position: absolute;
   top: 23%;
   left: 24%;
@@ -154,7 +165,7 @@ clear: both;
   -ms-transform: rotate(120deg);
 }
 
-/*#line-a {
+#line-a {
   position: absolute;
   top: 60%;
   left: 10%;
@@ -163,7 +174,8 @@ clear: both;
   transform: rotate(120deg);
   -webkit-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
-}*/
+}
+
 #line-b {
   position: absolute;
   top: 30%;
@@ -208,6 +220,22 @@ clear: both;
   -ms-transform: rotate(120deg);
 }
 
+
+.neutral-Selected {
+  stroke: yellow;
+  stroke-dasharray: 5;
+}
+
+.player1-Selected {
+  stroke: green;
+  stroke-dasharray: 5;
+}
+
+.player2-Selected {
+  stroke: red;
+  stroke-dasharray: 5;
+}
+
 .stroke-1 {
   stroke: red;
   stroke-dasharray: 0;
@@ -221,4 +249,26 @@ clear: both;
 .stroke-3 {
   stroke: green;
   stroke-dasharray: 5;
+}
+
+.stroke-4 {
+  stroke: url(#pattern);
+  stroke-dasharray: 10;
+}
+
+/* DEMO STYLES */
+/*body {
+  background: #333;
+}*/
+
+.module {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  fill: #333;
+  stroke-width: 5%;
 }
