@@ -13,15 +13,15 @@ var nodes = [
 		{ connectedNodes: [1, 3],    powerDefenseAttack: 3, owner: 2 }      //Node: 4
 	];
 
-  document.getElementById("nodePower-0").innerHTML = nodes[0].powerDefenseAttack;
-  document.getElementById("nodePower-1").innerHTML = nodes[1].powerDefenseAttack;
-  document.getElementById("nodePower-2").innerHTML = nodes[2].powerDefenseAttack;
-  document.getElementById("nodePower-3").innerHTML = nodes[3].powerDefenseAttack;
-  document.getElementById("nodePower-4").innerHTML = nodes[4].powerDefenseAttack;
-
-  var paragraph = document.getElementById('paragraph');
-// http://learn.ironhack.com/#/learning_unit/749
-  contentDiv.setAttribute('nodePower-0', 'info-paragraph');
+//   document.getElementById("nodePower-0").innerHTML = nodes[0].powerDefenseAttack;
+//   document.getElementById("nodePower-1").innerHTML = nodes[1].powerDefenseAttack;
+//   document.getElementById("nodePower-2").innerHTML = nodes[2].powerDefenseAttack;
+//   document.getElementById("nodePower-3").innerHTML = nodes[3].powerDefenseAttack;
+//   document.getElementById("nodePower-4").innerHTML = nodes[4].powerDefenseAttack;
+//
+//   var paragraph = document.getElementById('paragraph');
+// // http://learn.ironhack.com/#/learning_unit/749
+//   contentDiv.setAttribute('nodePower-0', 'info-paragraph');
 
 console.log(nodes);
 
@@ -29,13 +29,15 @@ console.log(nodes);
 
 var id = " ";
 var firstClickedNode;
+var secondClickedNode;
 
  $(".node").click(function(){
    id = $(this).attr('id');
-   id = parseInt(id[id.length - 1]);
+  //  id = parseInt(id[id.length - 1]);
   //  console.log('parsedid is '+id);
   if(checkForFirstOrSecondClick() === true){
     firstClickedNode = id;
+    console.log("first clicked node is: " + firstClickedNode);
     console.log("The firstClickedNode is " + "node" + firstClickedNode);
   } else {
     // checkIfNodeAdjacent();
@@ -86,8 +88,10 @@ function checkIfNodeAdjacent () {
   // console.log("Exito!");
 }
 
-var isNodeAlly = function isNodeAlly () {
-  if (  firstClickedNode.owner === secondClickedNode.owner) {
+var isNodeAlly = function () {
+  console.log("calling isNodeAlly");
+  if (  nodes[firstClickedNode].owner === nodes[secondClickedNode].owner) {
+    console.log(firstClickedNode.owner + " " + secondClickedNode.owner);
     return true;
     // true if second clicked node belongs to same owner
   } else {
@@ -114,6 +118,7 @@ function actionNode () {
       // var updatePowerDefenseAttack;
       attackResult = nodes[secondClickedNode].powerDefenseAttack + nodes[firstClickedNode].powerDefenseAttack;
       console.log("Reinforcements have arrived!");
+      return attackResult;
 
     } else if (isNodeAlly === false) {
       attackResult = nodes[secondClickedNode].powerDefenseAttack - nodes[firstClickedNode].powerDefenseAttack;
@@ -123,10 +128,13 @@ function actionNode () {
         // console.log(updatePowerDefenseAttack);
         secondClickedNode.owner = firstClickedNode.owner;
         console.log("Node-"+secondClickedNode+" belongs to node-" + firstClickedNode);
+        return attackResult;
 
       } else {
         secondClickedNode = secondClickedNode;
         console.log("Node-"+secondClickedNode+" is still Node-" + secondClickedNode);
+
+
     }
   }
 }
