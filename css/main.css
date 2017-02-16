@@ -48,7 +48,7 @@ line {
 }
 
 p {
-  position: absolute;
+  /*position: absolute;*/
   font-size: 50px;
   top: 70%;
   left: 20%;

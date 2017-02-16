@@ -13,20 +13,22 @@ var nodes = [
 		{ connectedNodes: [1, 3],    powerDefenseAttack: 3, owner: 2 }      //Node: 4
 	];
 
-//   document.getElementById("nodePower-0").innerHTML = nodes[0].powerDefenseAttack;
-//   document.getElementById("nodePower-1").innerHTML = nodes[1].powerDefenseAttack;
-//   document.getElementById("nodePower-2").innerHTML = nodes[2].powerDefenseAttack;
-//   document.getElementById("nodePower-3").innerHTML = nodes[3].powerDefenseAttack;
-//   document.getElementById("nodePower-4").innerHTML = nodes[4].powerDefenseAttack;
-//
-//   var paragraph = document.getElementById('paragraph');
-// // http://learn.ironhack.com/#/learning_unit/749
-//   contentDiv.setAttribute('nodePower-0', 'info-paragraph');
+  document.getElementById("nodePower-0").innerHTML = nodes[0].powerDefenseAttack;
+  document.getElementById("nodePower-1").innerHTML = nodes[1].powerDefenseAttack;
+  document.getElementById("nodePower-2").innerHTML = nodes[2].powerDefenseAttack;
+  document.getElementById("nodePower-3").innerHTML = nodes[3].powerDefenseAttack;
+  document.getElementById("nodePower-4").innerHTML = nodes[4].powerDefenseAttack;
+
+updateHtmlPowerDefenseAttack();
+  function updateHtmlPowerDefenseAttack(){
+    nodes.forEach(function(node,i){
+      $('.nodePower-'+ i +'').html('Health : ' + node.powerDefenseAttack);
+    });
+  }
+// Need to add attackResult inside of updateHtmlPowerDefenseAttack() to actually update the powerDefenseAttack and add counter.
+
 
 console.log(nodes);
-
-
-
 var id = " ";
 var firstClickedNode;
 var secondClickedNode;
@@ -148,25 +150,26 @@ function actionNode () {
         nodes[firstClickedNode].powerDefenseAttack = 0;
     }
   }
+  updateHtmlPowerDefenseAttack();
   console.log(nodes[secondClickedNode]);
   console.log(nodes[firstClickedNode]);
 }
 
 
 
-function drawLine (firstNode, secondNode) {
-  console.log(firstNode, secondNode);
-  var pos1 = $('#node' + firstNode).position();
-  var pos2 = $('#node' + secondNode).position();
-  var lineId = 'line' + firstNode + '-' + secondNode;
-
-  $('#' + lineId)
-    .attr('x1', pos1.left + 40)
-    .attr('y1', pos1.top + 40)
-    .attr('x2', pos2.left + 40)
-    .attr('y2', pos2.top + 40);
-}
-
-drawLine(4, 1);
-drawLine(4, 2);
-drawLine(2, 3);
+// function drawLine (firstNode, secondNode) {
+//   console.log(firstNode, secondNode);
+//   var pos1 = $('#node' + firstNode).position();
+//   var pos2 = $('#node' + secondNode).position();
+//   var lineId = 'line' + firstNode + '-' + secondNode;
+//
+//   $('#' + lineId)
+//     .attr('x1', pos1.left + 40)
+//     .attr('y1', pos1.top + 40)
+//     .attr('x2', pos2.left + 40)
+//     .attr('y2', pos2.top + 40);
+// }
+//
+// drawLine(4, 1);
+// drawLine(4, 2);
+// drawLine(2, 3);
