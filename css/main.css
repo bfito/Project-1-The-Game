@@ -12,11 +12,18 @@ body {
 
 p {
   position: absolute;
-  font-size: 100px;
-  top: 20%;
+  font-size: 50px;
+  top: 70%;
   left: 20%;
+  color: black;
 
 }
+
+img {
+  height: 150px;
+  width: 150px;
+}
+
 /*.row {
 clear: both;
    background-color: peachpuff;
@@ -38,13 +45,13 @@ clear: both;
   line-height: 87px;
 }*/
 
-.node {
+/*.node {
   border: 1px solid indigo;
   border-radius: 50%;
   width: 500px;
   height: 500px;
   color: black;
-}
+}*/
 
 .node-neutral {
   /*border-color: green;*/
@@ -67,30 +74,31 @@ clear: both;
   left: 10%;
 }
 
-#node-1 {
-  position: absolute;
-  top: 30%;
-  left: 80%;
-}
 
-#node-2 {
+#node-1 {
   position: absolute;
   top: 10%;
   left: 30%;
 }
 
-#node-3 {
+#node-2 {
   position: absolute;
   top: 50%;
   left: 40%;
 }
 
-#node-4 {
+#node-3 {
   position: absolute;
   top: 70%;
   left: 60%;
 }
 
+
+#node-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+}
 .line {
   position: absolute;
   background-color: black;

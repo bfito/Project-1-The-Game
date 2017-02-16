@@ -77,6 +77,16 @@ function checkIfNodeAdjacent () {
   // console.log("Exito!");
 }
 
+var isNodeAlly = function isNodeAlly () {
+  if (  firstClickedNode.owner === secondClickedNode.owner) {
+    return true;
+    // true if second clicked node belongs to same owner
+  } else {
+    return false;
+    // false if second node is neutral or enemy
+
+  }
+};
 
 function actionNode () {
   // console.log(secondClickedNode);
@@ -87,17 +97,19 @@ function actionNode () {
   // console.log(attackResult);
   // nodes[secondClickedNode].powerDefenseAttack = attackResult;
   // console.log(nodes[secondClickedNode].powerDefenseAttack);
-  var attackResult;
 
-    if (friendOrFoe === true) {
+
+    if (isNodeAlly === true) {
+      //
+      // var attackResult;
+      // var updatePowerDefenseAttack;
       attackResult = nodes[secondClickedNode].powerDefenseAttack + nodes[firstClickedNode].powerDefenseAttack;
       console.log("Reinforcements have arrived!");
 
-    } else if (friendOrFoe === false) {
+    } else if (isNodeAlly === false) {
       attackResult = nodes[secondClickedNode].powerDefenseAttack - nodes[firstClickedNode].powerDefenseAttack;
 
-      if (attackResult < 0) {
-        var updatePowerDefenseAttack;
+      if (this.attackResult < 0) {
         updatePowerDefenseAttack = attackResult * -1;
         // console.log(updatePowerDefenseAttack);
         secondClickedNode.owner = firstClickedNode.owner;
@@ -110,16 +122,8 @@ function actionNode () {
   }
 }
 
-var friendOrFoe = function friendOrFoe () {
-  if (  firstClickedNode.owner === secondClickedNode.owner) {
-    return true;
-    // true if second clicked node belongs to same owner
-  } else {
-    return false;
-    // false if second node is neutral or enemy
 
-  }
-};
+
 
 
 
