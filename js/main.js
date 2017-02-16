@@ -13,11 +13,16 @@ var nodes = [
 		{ connectedNodes: [1, 3],    powerDefenseAttack: 3, owner: 2 }      //Node: 4
 	];
 
-  <p id="demo"></p>
+  document.getElementById("nodePower-0").innerHTML = nodes[0].powerDefenseAttack;
+  document.getElementById("nodePower-1").innerHTML = nodes[1].powerDefenseAttack;
+  document.getElementById("nodePower-2").innerHTML = nodes[2].powerDefenseAttack;
+  document.getElementById("nodePower-3").innerHTML = nodes[3].powerDefenseAttack;
+  document.getElementById("nodePower-4").innerHTML = nodes[4].powerDefenseAttack;
 
-  <script>
-  document.getElementById("demo").innerHTML = 5 + 6;
-  </script>
+  var paragraph = document.getElementById('paragraph');
+// http://learn.ironhack.com/#/learning_unit/749
+  contentDiv.setAttribute('nodePower-0', 'info-paragraph');
+
 console.log(nodes);
 
 
