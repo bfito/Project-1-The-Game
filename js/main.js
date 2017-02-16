@@ -170,7 +170,9 @@ function actionNode () {
   console.log(nodes[firstClickedNode]);
 }
 
-
+function winner () {
+  
+}
 
 // function drawLine (firstNode, secondNode) {
 //   console.log(firstNode, secondNode);

@@ -49,7 +49,7 @@ line {
 
 p {
   /*position: absolute;*/
-  font-size: 50px;
+  font-size: 70px;
   top: 70%;
   left: 20%;
   color: black;
@@ -120,7 +120,7 @@ clear: both;
 
 .node-0 img, .node-1  img, .node-2 img, .node-3 img, .node-4 img {
   position: relative;
-  top: 25px;
+  top: 26px;
 }
 
 .node-1 {
@@ -154,72 +154,72 @@ clear: both;
   style: dotted;
 }
 
-#line-a {
-  position: absolute;
-  top: 23%;
-  left: 24%;
-  height: 41%;
-
-  transform: rotate(120deg);
-  -webkit-transform: rotate(120deg);
-  -ms-transform: rotate(120deg);
+#line-a, #line-b, #line-c, #line-d, #line-e, #line-f {
+  width: 10px;
+  style: dotted;
 }
 
 #line-a {
   position: absolute;
-  top: 60%;
-  left: 10%;
-  height: 100px;
-
+  top: 18%;
+  left: 23%;
+  height: 1000px;
   transform: rotate(120deg);
-  -webkit-transform: rotate(120deg);
+  -webkit-transform: rotate(37deg);
   -ms-transform: rotate(120deg);
 }
 
 #line-b {
   position: absolute;
-  top: 30%;
-  left: 80%;
-  height: 100px;
-
+  top: 35%;
+  left: 73%;
+  height: 870px;
   transform: rotate(120deg);
-  -webkit-transform: rotate(120deg);
-  -ms-transform: rotate(120deg);
+  -webkit-transform: rotate(45deg);
 
 }
+
 #line-c {
   position: absolute;
-  top: 10%;
-  left: 30%;
-  height: 100px;
-
+  top: -18%;
+  left: 58%;
+  height: 1778px;
   transform: rotate(120deg);
-  -webkit-transform: rotate(120deg);
+  -webkit-transform: rotate(101deg);
   -ms-transform: rotate(120deg);
 
 }
+
 #line-d {
   position: absolute;
-  top: 50%;
-  left: 40%;
-  height: 100px;
-
+  top: 37%;
+  left: 28%;
+  height: 970px;
   transform: rotate(120deg);
-  -webkit-transform: rotate(120deg);
+  -webkit-transform: rotate(80deg);
   -ms-transform: rotate(120deg);
 
 }
+
 #line-e {
   position: absolute;
-  top: 70%;
-  left: 60%;
-  height: 100px;
-
+  top: 48%;
+  left: 53%;
+  height: 644px;
   transform: rotate(120deg);
-  -webkit-transform: rotate(120deg);
+  -webkit-transform: rotate(116deg);
   -ms-transform: rotate(120deg);
 }
 
+#line-f {
+  position: absolute;
+  top: 20%;
+  left: 38%;
+  height: 625px;
+  transform: rotate(120deg);
+  -webkit-transform: rotate(155deg);
+  -ms-transform: rotate(120deg);
+}
 
 .neutral-Selected {
   stroke: yellow;
