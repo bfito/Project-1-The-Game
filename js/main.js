@@ -13,16 +13,34 @@ var nodes = [
 		{ connectedNodes: [1, 3],    powerDefenseAttack: 3, owner: 2 }      //Node: 4
 	];
 
-  document.getElementById("nodePower-0").innerHTML = nodes[0].powerDefenseAttack;
-  document.getElementById("nodePower-1").innerHTML = nodes[1].powerDefenseAttack;
-  document.getElementById("nodePower-2").innerHTML = nodes[2].powerDefenseAttack;
-  document.getElementById("nodePower-3").innerHTML = nodes[3].powerDefenseAttack;
-  document.getElementById("nodePower-4").innerHTML = nodes[4].powerDefenseAttack;
+updateHtmlPowerDefenseAttack();
+ResistanceAttackPowerCounter();
+
+  // COUNTER WHICH IS THE AMOUNT OF Resistance OR AttackPower
+  var counter = 0;
+  function ResistanceAttackPowerCounter() {
+    window.setInterval(
+    function () {
+      for (var x = 0; x < nodes.length; x+=1) {
+        var oneNode = nodes[x];
+        if (oneNode.owner === 1 || oneNode.owner === 2) {
+          oneNode.powerDefenseAttack = oneNode.powerDefenseAttack + 1;
+        }
+      }
+      updateHtmlPowerDefenseAttack();
+      console.log(nodes[0].powerDefenseAttack);
+
+        // counter = counter + 1;
+        // document.getElementById("cell-1").innerHTML =  counter;
+        // incrementPowerDefenseAttack = counter +
+    }, 1000);
+  }
 
 updateHtmlPowerDefenseAttack();
   function updateHtmlPowerDefenseAttack(){
     nodes.forEach(function(node,i){
-      $('.nodePower-'+ i +'').html('Health : ' + node.powerDefenseAttack);
+      document.getElementById("nodePower-"+i).innerHTML = nodes[i].powerDefenseAttack;
+      // $('.nodePower-'+ i +'').html('Health : ' + node.powerDefenseAttack);
     });
   }
 // Need to add attackResult inside of updateHtmlPowerDefenseAttack() to actually update the powerDefenseAttack and add counter.
@@ -124,10 +142,7 @@ function actionNode () {
   console.log(attackResult);
   // nodes[secondClickedNode].powerDefenseAttack = attackResult;
   // console.log(nodes[secondClickedNode].powerDefenseAttack);
-
-
     if (isNodeAlly() === true) {
-      //
       // var attackResult;
       // var updatePowerDefenseAttack;
       console.log("Reinforcements have arrived!");
@@ -136,12 +151,12 @@ function actionNode () {
     } else if (isNodeAlly() === false) {
       if (attackResult < 0) {
         updatePowerDefenseAttack = attackResult * -1;
-        // console.log(updatePowerDefenseAttack);
+        console.log(updatePowerDefenseAttack);
         nodes[secondClickedNode].owner = nodes[firstClickedNode].owner;
         nodes[secondClickedNode].powerDefenseAttack = updatePowerDefenseAttack;
         nodes[firstClickedNode].powerDefenseAttack = 0;
-
-        console.log("Node-"+secondClickedNode+" belongs to node-" + firstClickedNode);
+        // updateHtmlPowerDefenseAttack();
+        // console.log("Node-"+secondClickedNode+" belongs to node-" + firstClickedNode);
         // return attackResult;
 
       } else {
