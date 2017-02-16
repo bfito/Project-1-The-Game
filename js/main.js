@@ -83,20 +83,36 @@ function actionNode () {
   // console.log(nodes[secondClickedNode]);
   // console.log(nodes[secondClickedNode].powerDefenseAttack);
   // console.log("Node-"+secondClickedNode+" has this much power "+nodes[secondClickedNode].powerDefenseAttack);
-  var attackResult = nodes[secondClickedNode].powerDefenseAttack - nodes[firstClickedNode].powerDefenseAttack;
+  // var attackResult = nodes[secondClickedNode].powerDefenseAttack - nodes[firstClickedNode].powerDefenseAttack;
   // console.log(attackResult);
   // nodes[secondClickedNode].powerDefenseAttack = attackResult;
   // console.log(nodes[secondClickedNode].powerDefenseAttack);
-  if (attackResult < 0) {
-    var updatePowerDefenseAttack;
-    updatePowerDefenseAttack = attackResult * -1;
-    // console.log(updatePowerDefenseAttack);
-    secondClickedNode.owner = firstClickedNode.owner;
-    // console.log("Node-"+secondClickedNode+" belongs to node-" + firstClickedNode);
-  } else {
-    secondClickedNode = secondClickedNode;
-    console.log("Node-"+secondClickedNode+" is still Node-" + secondClickedNode);
+  var attackResult;
 
+    if (friendOrFoe === true) {
+      attackResult = nodes[secondClickedNode].powerDefenseAttack + nodes[firstClickedNode].powerDefenseAttack;
+
+    } else if (friendOrFoe === false) {
+
+      if (attackResult < 0) {
+        var updatePowerDefenseAttack;
+        updatePowerDefenseAttack = attackResult * -1;
+        // console.log(updatePowerDefenseAttack);
+        secondClickedNode.owner = firstClickedNode.owner;
+        // console.log("Node-"+secondClickedNode+" belongs to node-" + firstClickedNode);
+      }
+      
+    } else {
+      secondClickedNode = secondClickedNode;
+      console.log("Node-"+secondClickedNode+" is still Node-" + secondClickedNode);
+  }
+}
+
+function friendOrFoe () {
+  if (  firstClickedNode.owner === secondClickedNode.owner) {
+    return true;
+  } else {
+    return false;
   }
 }
 
