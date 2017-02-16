@@ -85,9 +85,14 @@ function actionNode () {
   // console.log("Node-"+secondClickedNode+" has this much power "+nodes[secondClickedNode].powerDefenseAttack);
   var attackResult = nodes[secondClickedNode].powerDefenseAttack - nodes[firstClickedNode].powerDefenseAttack;
   // console.log(attackResult);
-  nodes[secondClickedNode].powerDefenseAttack = attackResult;
+  // nodes[secondClickedNode].powerDefenseAttack = attackResult;
   // console.log(nodes[secondClickedNode].powerDefenseAttack);
+  if (attackResult < 0) {
+    var updatePowerDefenseAttack;
+    updatePowerDefenseAttack = attackResult * -1;
+    console.log(updatePowerDefenseAttack);
   }
+}
 
 
 
