@@ -90,7 +90,13 @@ function actionNode () {
   if (attackResult < 0) {
     var updatePowerDefenseAttack;
     updatePowerDefenseAttack = attackResult * -1;
-    console.log(updatePowerDefenseAttack);
+    // console.log(updatePowerDefenseAttack);
+    secondClickedNode.owner = firstClickedNode.owner;
+    // console.log("Node-"+secondClickedNode+" belongs to node-" + firstClickedNode);
+  } else {
+    secondClickedNode = secondClickedNode;
+    console.log("Node-"+secondClickedNode+" is still Node-" + secondClickedNode);
+
   }
 }
 
