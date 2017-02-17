@@ -2,47 +2,50 @@ html,
 body {
   height: 100%;
   /*width: 80%;*/
-  background-color: peachpuff;
+  background-color: black;
   font-family: 'VT323', monospace;
   color: white;
 }
 
-/*.container {
-  background-color: red;
-  margin: 50% 50%;
-  height: 150px;
-  width: 150px;
-}*/
+h1{
+  position: absolute;
+  left: 1%;
+  font-size: 100px;
+}
 
 p {
-  /*position: absolute;*/
+  position: absolute;
   font-size: 70px;
-  top: 70%;
-  left: 20%;
+  top: 24%;
+  left: 44%;
 }
 
 span {
   position: absolute;
+  top: 10;
   /*top: ;*/
 }
 
 .neutral-ring {
   border: 20px #9EA49E;
-
-
   /*background-color: grey;*/
 }
-
 .player-1-ring {
   border: 20px #54EF54;
   /*background-color: green;*/
 }
-
 .player-2-ring {
   border: 20px #EF5353;
+}
 
-
-  /*b 30pxackground-color: red;*/
+.neutralConnection {
+  color: #9EA49E;
+}
+.player1Connection {
+  color: #54EF54;;
+}
+.player2Connection {
+  color: ##EF5353;;
 }
 
 img {
@@ -124,18 +127,6 @@ img {
   /*background-color:#fff;*/
   /*height:1px;*/
   width: 0%;
-}
-
-.neutralConnection {
-  color: #9EA49E;
-}
-
-.player1Connection {
-  color: #54EF54;;
-}
-
-.player2Connection {
-  color: ##EF5353;;
 }
 
 #line-a {

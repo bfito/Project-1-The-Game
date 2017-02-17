@@ -163,9 +163,32 @@ function actionNode () {
       if (attackResult < 0) {
         updatePowerDefenseAttack = attackResult * -1;
         // console.log(updatePowerDefenseAttack);
-        
-        $('.node-' + secondClickedNode).removeClass("neutral-ring");
-        $('.node-' + secondClickedNode).addClass("player-1-ring");
+
+        // Following commands are to change the css of the  nodes that are taken over.
+        if (nodes[secondClickedNode].owner == 1) {
+          $('.node-' + secondClickedNode).removeClass("player-1-ring");
+          $('.node-' + secondClickedNode).addClass("player-2-ring");
+          // This is to change the color of the connection once a node has been taken over.
+
+
+ } else if (nodes[secondClickedNode].owner == 2) {
+          $('.node-' + secondClickedNode).removeClass("player-2-ring");
+          $('.node-' + secondClickedNode).addClass("player-1-ring");
+
+} else if (nodes[secondClickedNode].owner === null) {
+          $('.node-' + secondClickedNode).removeClass("neutral-ring");
+
+           } if (nodes[firstClickedNode].owner == 1) {
+                  $('.node-' + secondClickedNode).addClass("player-1-ring");
+      } else if (nodes[firstClickedNode].owner == 2) {
+                  $('.node-' + secondClickedNode).addClass("player-2-ring");
+                  }
+        // This is to change the color of the connection once a node has been taken over.
+
+        // switch (checkIfNodeAdjacent() === true) {
+        //       case :
+        //       break;
+        // }
 
         nodes[secondClickedNode].owner = nodes[firstClickedNode].owner;
         nodes[secondClickedNode].powerDefenseAttack = updatePowerDefenseAttack;
