@@ -130,9 +130,9 @@ img {
 }
 
 #line-b {
-  top: 35%;
-  left: 73%;
-  height: 870px;
+  top: 46%;
+  left: 76%;
+  height: 834px;
   transform: rotate(120deg);
   -webkit-transform: rotate(45deg);
 
@@ -159,9 +159,9 @@ img {
 }
 
 #line-e {
-  top: 48%;
-  left: 53%;
-  height: 644px;
+  top: 61%;
+  left: 55%;
+  height: 549px;
   transform: rotate(120deg);
   -webkit-transform: rotate(116deg);
   -ms-transform: rotate(120deg);

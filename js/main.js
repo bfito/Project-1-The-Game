@@ -99,11 +99,12 @@ function checkForFirstOrSecondClick() {
   }
 }
 
+
 function checkIfNodeAdjacent () {
   // console.log('testing checkIfNodeAdjacent is' +   firstClickedNode);
   var i = firstClickedNode;
   var j = secondClickedNode;
-  console.log(nodes[i].connectedNodes, j);
+  console.log(nodes[i],i);
 
   // console.log(i);
   for (var x = 0; x < nodes[i].connectedNodes.length + 1; x++) {
@@ -162,6 +163,10 @@ function actionNode () {
       if (attackResult < 0) {
         updatePowerDefenseAttack = attackResult * -1;
         console.log(updatePowerDefenseAttack);
+
+        $('node-' + secondClickedNode).removeClass("neutral-ring");
+        $('node-' + secondClickedNode).addClass("player-1-ring");
+
         nodes[secondClickedNode].owner = nodes[firstClickedNode].owner;
         nodes[secondClickedNode].powerDefenseAttack = updatePowerDefenseAttack;
         nodes[firstClickedNode].powerDefenseAttack = 0;
