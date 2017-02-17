@@ -122,7 +122,15 @@ img {
 }
 
 .neutralConnection {
-  
+  color: #9EA49E;
+}
+
+.player1Connection {
+  color: #54EF54;;
+}
+
+.player2Connection {
+  color: ##EF5353;;
 }
 
 #line-a {
