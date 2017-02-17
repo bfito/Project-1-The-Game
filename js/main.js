@@ -142,17 +142,23 @@ function actionNode () {
   console.log(nodes[firstClickedNode]);
   // console.log(nodes[secondClickedNode].powerDefenseAttack);
   // console.log("Node-"+secondClickedNode+" has this much power "+nodes[secondClickedNode].powerDefenseAttack);
-  var attackResult = nodes[secondClickedNode].powerDefenseAttack - nodes[firstClickedNode].powerDefenseAttack;
+  var attackResult;
+  var updatePowerDefenseAttack;
   console.log(attackResult);
   // nodes[secondClickedNode].powerDefenseAttack = attackResult;
   // console.log(nodes[secondClickedNode].powerDefenseAttack);
     if (isAnAlly() === true) {
+      attackResult = nodes[secondClickedNode].powerDefenseAttack + nodes[firstClickedNode].powerDefenseAttack;
+      nodes[secondClickedNode].powerDefenseAttack = attackResult;
       // var attackResult;
       // var updatePowerDefenseAttack;
       console.log("Reinforcements have arrived!");
       return attackResult;
 
     } else if (isAnAlly() === false) {
+      attackResult = nodes[secondClickedNode].powerDefenseAttack - nodes[firstClickedNode].powerDefenseAttack;
+      nodes[secondClickedNode].powerDefenseAttack = updatePowerDefenseAttack;
+
       if (attackResult < 0) {
         updatePowerDefenseAttack = attackResult * -1;
         console.log(updatePowerDefenseAttack);
