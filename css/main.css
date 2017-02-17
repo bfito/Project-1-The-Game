@@ -1,51 +1,16 @@
 html,
-body,
-svg {
+body {
   height: 100%;
+  /*width: 80%;*/
+  /*background-color: green;*/
 }
 
-/*.node {
-  width: 100px;
-  height: 100px;
-  background-color: orange;
-  border-radius: 50%;
-  position: absolute;
-  font-size: 40px;
-  text-align: center;
-}*/
-
-/*#node1 {
-  right: 20%;
-  top: 30%;
-}
-
-#node2 {
-  left: 20%;
-  bottom: 30%;
-}
-
-#node3 {
-  right: 50%;
-  top: 35%;
-}*/
-
-svg {
-  width: 100%;
-}
-
-line {
-  stroke: #000;
-  stroke-width: 5;
-}
-
-/*********************************************/
-
-.container {
-  /*background-color: red;
+/*.container {
+  background-color: red;
   margin: 50% 50%;
   height: 150px;
-  width: 150px;*/
-}
+  width: 150px;
+}*/
 
 p {
   /*position: absolute;*/
@@ -56,97 +21,77 @@ p {
 
 }
 
+.neutral {
+  border: grey;
+  /*background-color: grey;*/
+}
+
+.player-1 {
+  border: green;
+  /*background-color: green;*/
+}
+
+.player-2 {
+  border: red;
+  /*background-color: red;*/
+}
+
 img {
-  height: 150px;
-  width: 150px;
-}
-
-/*.row {
-clear: both;
-   background-color: peachpuff;
-    height: 70px;
-    width: 120px;
-    padding: 1px;
-    margin: auto;
-}
-
-
-.nodeBox {
-  float: left;
-  border: 1px solid white;
-  padding: 10px;
-  width: 110px;
-  height: 110px;
-  box-sizing: border-box;
-  text-align: center;
-  line-height: 87px;
-}*/
-
-/*.node {
-  border: 1px solid indigo;
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-  color: black;
-}*/
-
-.node-neutral {
-  /*border-color: green;*/
-  background-color: grey;
-}
-
-.node-player-1 {
-  /*border-color: green;*/
-  background-color: green;
-}
-
-.node-player-2 {
-  /*border-color: red;*/
-  background-color: red;
+  position: relative;
+  /*position: absolute;*/
+  top: 26px;
+  height: 70%;
+  width: 70%;
+  margin: 8%;
+  /*width: 150px;
+  height: 70%;*/
 }
 
 .node-0, .node-1, .node-2, .node-3, .node-4 {
   position: absolute;
-  top: 60%;
-  left: 10%;
-  border: 16px solid black;
-  width: 200px;
-  height: 200px;
+  /*top: 60%;
+  left: 10%;*/
+  /*border: 16px solid;*/
+  /*width: 200px;
+  height: 200px;*/
+  width: 10%;
+  height: 20%;
   text-align: center;
   border-radius: 50%;
-  /* stroke-dasharray: 27; */
+   stroke-dasharray: 27;
   border-style: dashed;
 }
 
-.node-0 img, .node-1  img, .node-2 img, .node-3 img, .node-4 img {
-  position: relative;
-  top: 26px;
+.node-0 , .node-1  , .node-2 , .node-3 , .node-4  {
+  position: absolute;
+}
+
+.node-0 {
+  top: 60%;
+  left: 10%;
 }
 
 .node-1 {
-  position: absolute;
   top: 10%;
   left: 30%;
 }
 
 .node-2 {
-  position: absolute;
   top: 50%;
   left: 40%;
 }
 
 .node-3 {
-  position: absolute;
   top: 70%;
   left: 60%;
 }
 
 
 .node-4 {
-  position: absolute;
   top: 30%;
   left: 80%;
 }
+
 .line {
   position: absolute;
   background-color: black;
@@ -154,13 +99,23 @@ clear: both;
   style: dotted;
 }
 
-#line-a, #line-b, #line-c, #line-d, #line-e, #line-f {
+/*#line-a, #line-b, #line-c, #line-d, #line-e, #line-f {
+  position: absolute;
   width: 10px;
-  style: dotted;
+}*/
+
+#line-a, #line-b, #line-c, #line-d, #line-e, #line-f {
+  position: absolute;
+  /*border:none;*/
+  border: 1px dotted #ff0000;
+  border-style: none none dotted;
+  color:#fff;
+  /*background-color:#fff;*/
+  /*height:1px;*/
+  width: 0.3%;
 }
 
 #line-a {
-  position: absolute;
   top: 18%;
   left: 23%;
   height: 1000px;
@@ -170,7 +125,6 @@ clear: both;
 }
 
 #line-b {
-  position: absolute;
   top: 35%;
   left: 73%;
   height: 870px;
@@ -180,7 +134,6 @@ clear: both;
 }
 
 #line-c {
-  position: absolute;
   top: -18%;
   left: 58%;
   height: 1778px;
@@ -191,7 +144,6 @@ clear: both;
 }
 
 #line-d {
-  position: absolute;
   top: 37%;
   left: 28%;
   height: 970px;
@@ -202,7 +154,6 @@ clear: both;
 }
 
 #line-e {
-  position: absolute;
   top: 48%;
   left: 53%;
   height: 644px;
@@ -212,63 +163,10 @@ clear: both;
 }
 
 #line-f {
-  position: absolute;
   top: 20%;
   left: 38%;
   height: 625px;
   transform: rotate(120deg);
   -webkit-transform: rotate(155deg);
   -ms-transform: rotate(120deg);
-}
-
-.neutral-Selected {
-  stroke: yellow;
-  stroke-dasharray: 5;
-}
-
-.player1-Selected {
-  stroke: green;
-  stroke-dasharray: 5;
-}
-
-.player2-Selected {
-  stroke: red;
-  stroke-dasharray: 5;
-}
-
-.stroke-1 {
-  stroke: red;
-  stroke-dasharray: 0;
-}
-
-.stroke-2 {
-  stroke: yellow;
-  stroke-dasharray: 2;
-}
-
-.stroke-3 {
-  stroke: green;
-  stroke-dasharray: 5;
-}
-
-.stroke-4 {
-  stroke: url(#pattern);
-  stroke-dasharray: 10;
-}
-
-/* DEMO STYLES */
-/*body {
-  background: #333;
-}*/
-
-.module {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-svg {
-  fill: #333;
-  stroke-width: 5%;
 }
