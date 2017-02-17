@@ -55,21 +55,24 @@ var secondClickedNode;
    id = $(this).attr('id');
    id = parseInt(id);
   //  console.log('parsedid is '+id);
+
   if(checkForFirstOrSecondClick() === true){
     firstClickedNode = id;
     console.log("first clicked node is: " + firstClickedNode);
     console.log("The firstClickedNode is " + "node" + firstClickedNode);
+
   } else {
     secondClickedNode = id;
 
     if (checkIfNodeAdjacent() === true) {
       console.log("secondClickedNode is " + "node" + secondClickedNode);
       actionNode();
-      firstClickedNode = undefined;
+        firstClickedNode = undefined;
+
     } else {
       firstClickedNode = id;
     }
-    secondClickedNode = undefined;
+      secondClickedNode = undefined;
   }
    checkNodesOwnership(nodes[id]);
   //  checkIfNodeAdjacent();
@@ -103,7 +106,9 @@ function checkIfNodeAdjacent () {
   console.log(nodes[i].connectedNodes, j);
 
   // console.log(i);
-  for (var x = 0; x < nodes[i].connectedNodes.length - 1; x++) {
+  for (var x = 0; x < nodes[i].connectedNodes.length + 1; x++) {
+    console.log("j is : " + j);
+    console.log("It is being compared to: " + nodes[i].connectedNodes[x]);
     if (nodes[i].connectedNodes[x] === j) {
       console.log("Node-"+ i + " is adjacent to " + "Node-" + j);
       return true;
@@ -119,8 +124,8 @@ function checkIfNodeAdjacent () {
   // Return false was breaking the the loop and not getting go through the whole array. We placed the return false out of the loop but it still in the function.
 }
 
-var isNodeAlly = function () {
-  console.log("calling isNodeAlly");
+var isAnAlly = function () {
+  console.log("calling isAnAlly");
   if (  nodes[firstClickedNode].owner === nodes[secondClickedNode].owner) {
     console.log(firstClickedNode.owner + " " + secondClickedNode.owner);
     return true;
@@ -128,7 +133,6 @@ var isNodeAlly = function () {
   } else {
     return false;
     // false if second node is neutral or enemy
-
   }
 };
 
@@ -142,13 +146,13 @@ function actionNode () {
   console.log(attackResult);
   // nodes[secondClickedNode].powerDefenseAttack = attackResult;
   // console.log(nodes[secondClickedNode].powerDefenseAttack);
-    if (isNodeAlly() === true) {
+    if (isAnAlly() === true) {
       // var attackResult;
       // var updatePowerDefenseAttack;
       console.log("Reinforcements have arrived!");
       return attackResult;
 
-    } else if (isNodeAlly() === false) {
+    } else if (isAnAlly() === false) {
       if (attackResult < 0) {
         updatePowerDefenseAttack = attackResult * -1;
         console.log(updatePowerDefenseAttack);
@@ -166,12 +170,14 @@ function actionNode () {
     }
   }
   updateHtmlPowerDefenseAttack();
+  firstClickedNode = undefined;
+  secondClickedNode = undefined;
   console.log(nodes[secondClickedNode]);
   console.log(nodes[firstClickedNode]);
 }
 
 function winner () {
-  
+
 }
 
 // function drawLine (firstNode, secondNode) {
