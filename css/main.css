@@ -180,7 +180,7 @@ img {
 
 
 
-.rotate1:hover{
+#rotate1:hover{
   -webkit-animation: rotate 12s linear infinite;
 }
 
