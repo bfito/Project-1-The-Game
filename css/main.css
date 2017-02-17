@@ -21,19 +21,23 @@ p {
 
 }
 
-.neutral {
-  border: grey;
+.neutral-ring {
+  border: 30px grey;
+
+
   /*background-color: grey;*/
 }
 
-.player-1 {
-  border: green;
+.player-1-ring {
+  border: 30px green;
   /*background-color: green;*/
 }
 
-.player-2 {
-  border: red;
-  /*background-color: red;*/
+.player-2-ring {
+  border: 30px red;
+
+
+  /*b 30pxackground-color: red;*/
 }
 
 img {
@@ -51,7 +55,6 @@ img {
   position: absolute;
   /*top: 60%;
   left: 10%;*/
-  /*border: 16px solid;*/
   /*width: 200px;
   height: 200px;*/
   width: 10%;
