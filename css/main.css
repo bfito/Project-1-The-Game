@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   /*width: 80%;*/
-  /*background-color: green;*/
+  background-color: peachpuff;
 }
 
 /*.container {
@@ -22,19 +22,19 @@ p {
 }
 
 .neutral-ring {
-  border: 30px grey;
+  border: 20px #9EA49E;
 
 
   /*background-color: grey;*/
 }
 
 .player-1-ring {
-  border: 30px green;
+  border: 20px #54EF54;
   /*background-color: green;*/
 }
 
 .player-2-ring {
-  border: 30px red;
+  border: 20px #EF5353;
 
 
   /*b 30pxackground-color: red;*/
@@ -61,7 +61,7 @@ img {
   height: 20%;
   text-align: center;
   border-radius: 50%;
-   stroke-dasharray: 27;
+  stroke-dasharray: 27;
   border-style: dashed;
 }
 
@@ -95,12 +95,12 @@ img {
   left: 80%;
 }
 
-.line {
+/*.line {
   position: absolute;
   background-color: black;
   width: 5px;
   style: dotted;
-}
+}*/
 
 /*#line-a, #line-b, #line-c, #line-d, #line-e, #line-f {
   position: absolute;
@@ -110,21 +110,23 @@ img {
 #line-a, #line-b, #line-c, #line-d, #line-e, #line-f {
   position: absolute;
   /*border:none;*/
-  border: 1px dotted #ff0000;
-  border-style: none none dotted;
-  color:#fff;
+  /*border: 1px dotted #ff0000;*/
+  border: 10px;
+  /*border-style: none none dotted;*/
+  border-style: dashed;
+  /*stroke-dasharray: 27;*/
+  color: #545454;
   /*background-color:#fff;*/
   /*height:1px;*/
-  width: 0.3%;
+  width: 0%;
 }
 
 #line-a {
-  top: 18%;
-  left: 23%;
-  height: 1000px;
-  transform: rotate(120deg);
-  -webkit-transform: rotate(37deg);
-  -ms-transform: rotate(120deg);
+  top: 26%;
+      left: 25%;
+      height: 970px;
+      transform: rotate(120deg);
+      -webkit-transform: rotate(42deg);
 }
 
 #line-b {
@@ -137,9 +139,9 @@ img {
 }
 
 #line-c {
-  top: -18%;
-  left: 58%;
-  height: 1778px;
+  top: -8%;
+  left: 60%;
+  height: 1914px;
   transform: rotate(120deg);
   -webkit-transform: rotate(101deg);
   -ms-transform: rotate(120deg);
@@ -147,9 +149,9 @@ img {
 }
 
 #line-d {
-  top: 37%;
-  left: 28%;
-  height: 970px;
+  top: 47%;
+  left: 30%;
+  height: 917px;
   transform: rotate(120deg);
   -webkit-transform: rotate(80deg);
   -ms-transform: rotate(120deg);
@@ -166,9 +168,9 @@ img {
 }
 
 #line-f {
-  top: 20%;
-  left: 38%;
-  height: 625px;
+  top: 32%;
+  left: 40%;
+  height: 452px;
   transform: rotate(120deg);
   -webkit-transform: rotate(155deg);
   -ms-transform: rotate(120deg);
