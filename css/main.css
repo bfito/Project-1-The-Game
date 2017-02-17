@@ -3,6 +3,8 @@ body {
   height: 100%;
   /*width: 80%;*/
   background-color: peachpuff;
+  font-family: 'VT323', monospace;
+  color: white;
 }
 
 /*.container {
@@ -17,8 +19,11 @@ p {
   font-size: 70px;
   top: 70%;
   left: 20%;
-  color: black;
+}
 
+span {
+  position: absolute;
+  /*top: ;*/
 }
 
 .neutral-ring {
@@ -135,10 +140,10 @@ img {
 
 #line-a {
   top: 26%;
-      left: 25%;
-      height: 970px;
-      transform: rotate(120deg);
-      -webkit-transform: rotate(42deg);
+  left: 25%;
+  height: 970px;
+  transform: rotate(120deg);
+  -webkit-transform: rotate(42deg);
 }
 
 #line-b {

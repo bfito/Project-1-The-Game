@@ -162,10 +162,10 @@ function actionNode () {
 
       if (attackResult < 0) {
         updatePowerDefenseAttack = attackResult * -1;
-        console.log(updatePowerDefenseAttack);
-
-        $('node-' + secondClickedNode).removeClass("neutral-ring");
-        $('node-' + secondClickedNode).addClass("player-1-ring");
+        // console.log(updatePowerDefenseAttack);
+        
+        $('.node-' + secondClickedNode).removeClass("neutral-ring");
+        $('.node-' + secondClickedNode).addClass("player-1-ring");
 
         nodes[secondClickedNode].owner = nodes[firstClickedNode].owner;
         nodes[secondClickedNode].powerDefenseAttack = updatePowerDefenseAttack;
