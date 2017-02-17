@@ -121,6 +121,10 @@ img {
   width: 0%;
 }
 
+.neutralConnection {
+  
+}
+
 #line-a {
   top: 26%;
       left: 25%;
@@ -159,9 +163,9 @@ img {
 }
 
 #line-e {
-  top: 61%;
-  left: 55%;
-  height: 549px;
+  top: 60%;
+  left: 56%;
+  height: 454px;
   transform: rotate(120deg);
   -webkit-transform: rotate(116deg);
   -ms-transform: rotate(120deg);
