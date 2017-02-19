@@ -16,7 +16,7 @@ var nodes = [
 updateHtmlPowerDefenseAttack();
 ResistanceAttackPowerCounter();
 
-  // COUNTER WHICH IS THE AMOUNT OF Resistance OR AttackPower
+  // COUNTER WHICH IS THE AMOUNT OF health OR AttackPower
   var counter = 0;
   function ResistanceAttackPowerCounter() {
     window.setInterval(
@@ -29,10 +29,6 @@ ResistanceAttackPowerCounter();
       }
       updateHtmlPowerDefenseAttack();
       // console.log(nodes[0].powerDefenseAttack);
-
-        // counter = counter + 1;
-        // document.getElementById("cell-1").innerHTML =  counter;
-        // incrementPowerDefenseAttack = counter +
     }, 1000);
   }
 
@@ -40,7 +36,6 @@ updateHtmlPowerDefenseAttack();
   function updateHtmlPowerDefenseAttack(){
     nodes.forEach(function(node,i){
       document.getElementById("nodePower-"+i).innerHTML = nodes[i].powerDefenseAttack;
-      // $('.nodePower-'+ i +'').html('Health : ' + node.powerDefenseAttack);
     });
   }
 // Need to add attackResult inside of updateHtmlPowerDefenseAttack() to actually update the powerDefenseAttack and add counter.
@@ -75,7 +70,6 @@ var secondClickedNode;
       secondClickedNode = undefined;
   }
    checkNodesOwnership(nodes[id]);
-  //  checkIfNodeAdjacent();
  });
 
 function checkForFirstOrSecondClick() {
@@ -89,7 +83,6 @@ function checkForFirstOrSecondClick() {
 
  function checkNodesOwnership (node) {
    if (node.owner == 1) {
-    // actionNode();
     console.log("True");
     console.log(firstClickedNode + " is P1's");
   } else if (node.owner == 2) {
@@ -152,8 +145,6 @@ function actionNode () {
       attackResult = nodes[secondClickedNode].powerDefenseAttack + nodes[firstClickedNode].powerDefenseAttack;
       nodes[secondClickedNode].powerDefenseAttack = attackResult;
       nodes[firstClickedNode].powerDefenseAttack = 0;
-      // var attackResult;
-      // var updatePowerDefenseAttack;
       console.log("Reinforcements have arrived!");
       return attackResult;
 
@@ -165,7 +156,8 @@ function actionNode () {
         updatePowerDefenseAttack = attackResult * -1;
         // console.log(updatePowerDefenseAttack);
 
-        // Following commands are to change the css of the  nodes that are taken over.
+// ******************************************************************************************************
+// Following commands are to change the css of the  nodes that are taken over.
         if (nodes[secondClickedNode].owner == 1) {
           $('.node-' + secondClickedNode).removeClass("player-1-ring");
           $('.node-' + secondClickedNode).addClass("player-2-ring");
@@ -184,12 +176,8 @@ function actionNode () {
       } else if (nodes[firstClickedNode].owner == 2) {
                   $('.node-' + secondClickedNode).addClass("player-2-ring");
                   }
-        // This is to change the color of the connection once a node has been taken over.
+// ******************************************************************************************************
 
-        // switch (checkIfNodeAdjacent() === true) {
-        //       case :
-        //       break;
-        // }
 
         nodes[secondClickedNode].owner = nodes[firstClickedNode].owner;
         nodes[secondClickedNode].powerDefenseAttack = updatePowerDefenseAttack;
@@ -202,6 +190,7 @@ function actionNode () {
         console.log("Node-"+secondClickedNode+" is still Node-" + secondClickedNode);
         nodes[secondClickedNode].powerDefenseAttack = attackResult;
         nodes[firstClickedNode].powerDefenseAttack = 0;
+
     }
   }
   updateHtmlPowerDefenseAttack();
@@ -210,24 +199,3 @@ function actionNode () {
   console.log(nodes[secondClickedNode]);
   console.log(nodes[firstClickedNode]);
 }
-
-function winner () {
-
-}
-
-// function drawLine (firstNode, secondNode) {
-//   console.log(firstNode, secondNode);
-//   var pos1 = $('#node' + firstNode).position();
-//   var pos2 = $('#node' + secondNode).position();
-//   var lineId = 'line' + firstNode + '-' + secondNode;
-//
-//   $('#' + lineId)
-//     .attr('x1', pos1.left + 40)
-//     .attr('y1', pos1.top + 40)
-//     .attr('x2', pos2.left + 40)
-//     .attr('y2', pos2.top + 40);
-// }
-//
-// drawLine(4, 1);
-// drawLine(4, 2);
-// drawLine(2, 3);

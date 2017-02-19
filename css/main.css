@@ -103,18 +103,6 @@ img {
   left: 80%;
 }
 
-/*.line {
-  position: absolute;
-  background-color: black;
-  width: 5px;
-  style: dotted;
-}*/
-
-/*#line-a, #line-b, #line-c, #line-d, #line-e, #line-f {
-  position: absolute;
-  width: 10px;
-}*/
-
 #line-a, #line-b, #line-c, #line-d, #line-e, #line-f {
   position: absolute;
   /*border:none;*/
@@ -184,11 +172,7 @@ img {
   -ms-transform: rotate(120deg);
 }
 
-
-
-
-
-#rotate1:hover{
+/*#rotate1:hover{
   -webkit-animation: rotate 12s linear infinite;
 }
 
@@ -204,4 +188,4 @@ img {
 @-webkit-keyframes unRotate {
   from{ -webkit-transform: rotate(0deg);   }
   to{   -webkit-transform: rotate(-360deg); }
-}
+}*/
