@@ -151,6 +151,7 @@ function actionNode () {
     if (isAnAlly() === true) {
       attackResult = nodes[secondClickedNode].powerDefenseAttack + nodes[firstClickedNode].powerDefenseAttack;
       nodes[secondClickedNode].powerDefenseAttack = attackResult;
+      nodes[firstClickedNode].powerDefenseAttack = 0;
       // var attackResult;
       // var updatePowerDefenseAttack;
       console.log("Reinforcements have arrived!");
