@@ -16,31 +16,6 @@ var nodes = [
 updateHtmlPowerDefenseAttack();
 ResistanceAttackPowerCounter();
 
-  // COUNTER WHICH IS THE AMOUNT OF health OR AttackPower
-  var counter = 0;
-  function ResistanceAttackPowerCounter() {
-    window.setInterval(
-    function () {
-      for (var x = 0; x < nodes.length; x+=1) {
-        var oneNode = nodes[x];
-        if (oneNode.owner === 1 || oneNode.owner === 2) {
-          oneNode.powerDefenseAttack = oneNode.powerDefenseAttack + 1;
-        }
-      }
-      updateHtmlPowerDefenseAttack();
-      // console.log(nodes[0].powerDefenseAttack);
-    }, 1000);
-  }
-
-updateHtmlPowerDefenseAttack();
-  function updateHtmlPowerDefenseAttack(){
-    nodes.forEach(function(node,i){
-      document.getElementById("nodePower-"+i).innerHTML = nodes[i].powerDefenseAttack;
-    });
-  }
-// Need to add attackResult inside of updateHtmlPowerDefenseAttack() to actually update the powerDefenseAttack and add counter.
-
-
 console.log(nodes);
 var id = " ";
 var firstClickedNode;
@@ -50,8 +25,10 @@ var secondClickedNode;
    id = $(this).attr('id');
    id = parseInt(id);
   //  console.log('parsedid is '+id);
-
-  if(checkForFirstOrSecondClick() === true){
+  // if (firstClickedNode === (node.owner === null)) {
+  //   firstClickedNode = undefined;
+  // } else if(checkForFirstOrSecondClick() === true){
+    if(checkForFirstOrSecondClick() === true){
     firstClickedNode = id;
     console.log("first clicked node is: " + firstClickedNode);
     console.log("The firstClickedNode is " + "node" + firstClickedNode);
@@ -199,3 +176,27 @@ function actionNode () {
   console.log(nodes[secondClickedNode]);
   console.log(nodes[firstClickedNode]);
 }
+
+// Counter is the  health and AttackPower
+var counter = 0;
+function ResistanceAttackPowerCounter() {
+  window.setInterval(
+  function () {
+    for (var x = 0; x < nodes.length; x+=1) {
+      var oneNode = nodes[x];
+      if (oneNode.owner === 1 || oneNode.owner === 2) {
+        oneNode.powerDefenseAttack = oneNode.powerDefenseAttack + 1;
+      }
+    }
+    updateHtmlPowerDefenseAttack();
+    // console.log(nodes[0].powerDefenseAttack);
+  }, 1000);
+}
+
+updateHtmlPowerDefenseAttack();
+function updateHtmlPowerDefenseAttack(){
+  nodes.forEach(function(node,i){
+    document.getElementById("nodePower-"+i).innerHTML = nodes[i].powerDefenseAttack;
+  });
+}
+// Need to add attackResult inside of updateHtmlPowerDefenseAttack() to actually update the powerDefenseAttack and add counter.
