@@ -15,4 +15,4 @@ This is the end of this game, as I will put more bell and whistles once I'm done
 
 Keep it real, keep it K.I.S.S.!
 
-Happy coding!
+Still under development.
