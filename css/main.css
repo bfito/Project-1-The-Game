@@ -26,6 +26,17 @@ span {
   /*top: ;*/
 }
 
+img {
+  position: relative;
+  /*position: absolute;*/
+  top: 26px;
+  height: 70%;
+  width: 70%;
+  margin: 8%;
+  /*width: 150px;
+  height: 70%;*/
+}
+
 .neutral-ring {
   border: 20px #9EA49E;
   /*background-color: grey;*/
@@ -46,17 +57,6 @@ span {
 }
 .player2Connection {
   color: ##EF5353;;
-}
-
-img {
-  position: relative;
-  /*position: absolute;*/
-  top: 26px;
-  height: 70%;
-  width: 70%;
-  margin: 8%;
-  /*width: 150px;
-  height: 70%;*/
 }
 
 .node-0, .node-1, .node-2, .node-3, .node-4 {
@@ -172,7 +172,7 @@ img {
   -ms-transform: rotate(120deg);
 }
 
-/*#rotate1:hover{
+#rotate1:hover{
   -webkit-animation: rotate 12s linear infinite;
 }
 
@@ -188,4 +188,4 @@ img {
 @-webkit-keyframes unRotate {
   from{ -webkit-transform: rotate(0deg);   }
   to{   -webkit-transform: rotate(-360deg); }
-}*/
+}

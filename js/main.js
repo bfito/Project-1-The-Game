@@ -32,6 +32,9 @@ var secondClickedNode;
     firstClickedNode = id;
     console.log("first clicked node is: " + firstClickedNode);
     console.log("The firstClickedNode is " + "node" + firstClickedNode);
+      if (node.owner[firstClickedNode] === null) {
+        firstClickedNode = null;
+      }
 
   } else {
     secondClickedNode = id;
