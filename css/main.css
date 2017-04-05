@@ -30,7 +30,7 @@ img {
   position: relative;
   /*position: absolute;*/
   top: 26px;
-  height: 70%;
+  height: auto;
   width: 70%;
   margin: 8%;
   /*width: 150px;
