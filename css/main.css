@@ -29,7 +29,7 @@ span {
 img {
   position: relative;
   /*position: absolute;*/
-  /*top: 26px;*/
+  top: 26px;
   height: auto;
   width: 70%;
   margin: 8%;
