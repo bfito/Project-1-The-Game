@@ -33,15 +33,8 @@ img {
   height: auto;
   width: 70%;
   margin: 8%;
-  /*width: 150px;
-  height: 70%;*/
 }
 
-.ring {
-  text-align: center;
-  border-radius: 50%;
-  stroke-dasharray: 27;
-}
 
 .neutral-ring {
   border: 0.5vw dashed #9EA49E;
@@ -65,41 +58,30 @@ img {
   color: ##EF5353;;
 }
 
-.node-0, .node-1, .node-2, .node-3, .node-4 {
+.ring {
   position: absolute;
-  width: 10%;
-  height: 20%;
   text-align: center;
-  /*border-radius: 50%;
+  border-radius: 50%;
   stroke-dasharray: 27;
-  border-style: dashed;*/
-}
-
-.node-0 , .node-1  , .node-2 , .node-3 , .node-4  {
-  position: absolute;
+  height: 18%;
 }
 
 .node-0 {
   top: 60%;
   left: 10%;
 }
-
 .node-1 {
   top: 10%;
   left: 30%;
 }
-
 .node-2 {
   top: 50%;
   left: 40%;
 }
-
 .node-3 {
   top: 70%;
   left: 60%;
 }
-
-
 .node-4 {
   top: 30%;
   left: 80%;
@@ -107,15 +89,9 @@ img {
 
 #line-a, #line-b, #line-c, #line-d, #line-e, #line-f {
   position: absolute;
-  /*border:none;*/
-  /*border: 1px dotted #ff0000;*/
   border: 10px;
-  /*border-style: none none dotted;*/
   border-style: dashed;
-  /*stroke-dasharray: 27;*/
   color: #545454;
-  /*background-color:#fff;*/
-  /*height:1px;*/
   width: 0%;
 }
 
@@ -126,16 +102,13 @@ img {
   transform: rotate(120deg);
   -webkit-transform: rotate(42deg);
 }
-
 #line-b {
   top: 46%;
   left: 76%;
   height: 834px;
   transform: rotate(120deg);
   -webkit-transform: rotate(45deg);
-
 }
-
 #line-c {
   top: -8%;
   left: 60%;
@@ -143,9 +116,7 @@ img {
   transform: rotate(120deg);
   -webkit-transform: rotate(101deg);
   -ms-transform: rotate(120deg);
-
 }
-
 #line-d {
   top: 47%;
   left: 30%;
@@ -153,9 +124,7 @@ img {
   transform: rotate(120deg);
   -webkit-transform: rotate(80deg);
   -ms-transform: rotate(120deg);
-
 }
-
 #line-e {
   top: 60%;
   left: 56%;
