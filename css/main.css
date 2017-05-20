@@ -37,16 +37,23 @@ img {
   height: 70%;*/
 }
 
+.ring {
+  border: ;
+  text-align: center;
+  border-radius: 50%;
+  stroke-dasharray: 27;
+}
+
 .neutral-ring {
-  border: 20px #9EA49E;
+  border: 0.5vw dashed #9EA49E;
   /*background-color: grey;*/
 }
 .player-1-ring {
-  border: 20px #54EF54;
+  border: 0.5vw dashed #54EF54;
   /*background-color: green;*/
 }
 .player-2-ring {
-  border: 20px #EF5353;
+  border: 0.5vw dashed #EF5353;
 }
 
 .neutralConnection {
@@ -61,16 +68,12 @@ img {
 
 .node-0, .node-1, .node-2, .node-3, .node-4 {
   position: absolute;
-  /*top: 60%;
-  left: 10%;*/
-  /*width: 200px;
-  height: 200px;*/
   width: 10%;
   height: 20%;
   text-align: center;
-  border-radius: 50%;
+  /*border-radius: 50%;
   stroke-dasharray: 27;
-  border-style: dashed;
+  border-style: dashed;*/
 }
 
 .node-0 , .node-1  , .node-2 , .node-3 , .node-4  {
