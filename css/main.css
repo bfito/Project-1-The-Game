@@ -27,11 +27,11 @@ span {
 }
 
 img {
-  position: relative;
-  /*position: absolute;*/
+  /*position: relative;*/
+  position: absolute;
   top: 26px;
   height: auto;
-  width: 70%;
+  width: 10%;
   margin: 8%;
 }
 
@@ -58,12 +58,17 @@ img {
   color: ##EF5353;;
 }
 
-.ring {
-  position: absolute;
-  text-align: center;
+/*.ring {*/
+  /*position: absolute;*/
+  /*text-align: center;
   border-radius: 50%;
   stroke-dasharray: 27;
   height: 18%;
+}*/
+
+.node{
+  height: 10%;
+  width: 10%;
 }
 
 .node-0 {
@@ -143,20 +148,20 @@ img {
   -ms-transform: rotate(120deg);
 }
 
-#rotate1:hover{
-  -webkit-animation: rotate 12s linear infinite;
+.ring:hover{
+  -webkit-animation: theRotate 12s linear infinite;
 }
 
-.unRotate1:hover{
-  -webkit-animation: rotate 12s linear infinite;
+img:hover{
+  -webkit-animation: unRotate 12s linear infinite;
 }
 
-@-webkit-keyframes rotate {
-  from{ -webkit-transform: rotate(0deg);   }
-  to{   -webkit-transform: rotate(360deg); }
+@-webkit-keyframes theRotate {
+  0%{ -webkit-transform: rotate(0deg);   }
+  100%{   -webkit-transform: rotate(360deg); }
 }
 
 @-webkit-keyframes unRotate {
-  from{ -webkit-transform: rotate(0deg);   }
-  to{   -webkit-transform: rotate(-360deg); }
+  0%{ -webkit-transform: rotate(360deg);   }
+  100%{   -webkit-transform: rotate(0deg); }
 }
