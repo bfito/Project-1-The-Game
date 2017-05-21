@@ -35,7 +35,6 @@ img {
   margin: 8%;
 }
 
-
 .neutral-ring {
   border: 0.5vw dashed #9EA49E;
   /*background-color: grey;*/
@@ -60,11 +59,11 @@ img {
 
 /*.ring {*/
   /*position: absolute;*/
-  /*text-align: center;
+  text-align: center;
   border-radius: 50%;
   stroke-dasharray: 27;
   height: 18%;
-}*/
+}
 
 .node{
   height: 10%;
