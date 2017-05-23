@@ -15,9 +15,9 @@ h1{
 
 p {
   position: absolute;
-  font-size: 70px;
-  top: 24%;
-  left: 44%;
+  font-size: 2vw;
+  top: 2vw;
+  left: 5vw;
 }
 
 span {
@@ -27,22 +27,15 @@ span {
 }
 
 img {
-  /*position: relative;*/
-  /*position: absolute;
-  top: 26px;*/
-  /*height: auto;*/
-  /*width: 10%;*/
   height: 8vw;
   margin: 16%;
 }
 
 .neutral-ring {
   border: 0.5vw dashed #9EA49E;
-  /*background-color: grey;*/
 }
 .player-1-ring {
   border: 0.5vw dashed #54EF54;
-  /*background-color: green;*/
 }
 .player-2-ring {
   border: 0.5vw dashed #EF5353;
@@ -62,7 +55,7 @@ img {
   position: absolute;
   text-align: center;
   border-radius: 50%;
-  stroke-dasharray: 27;
+  stroke-dasharray: 30;
   height: 10vw;
   width: 10vw;
 }
