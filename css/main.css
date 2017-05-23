@@ -30,8 +30,9 @@ img {
   /*position: relative;*/
   /*position: absolute;
   top: 26px;*/
-  height: auto;
-  width: 10%;
+  /*height: auto;*/
+  /*width: 10%;*/
+  height: 8vw;
   margin: 8%;
 }
 
@@ -62,13 +63,14 @@ img {
   text-align: center;
   border-radius: 50%;
   stroke-dasharray: 27;
-  height: 18%;
+  height: 10vw;
+  width: 10vw;
 }
 
 .node {
   position: absolute;
-  /*height: 10%;*/
-  /*width: 10%;*/
+  height: 10%;
+  width: 10%;
 }
 
 .node-0 {
