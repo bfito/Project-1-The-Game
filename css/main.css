@@ -57,17 +57,18 @@ img {
   color: ##EF5353;;
 }
 
-/*.ring {*/
-  /*position: absolute;*/
+.ring {
+  position: absolute;
   text-align: center;
   border-radius: 50%;
   stroke-dasharray: 27;
   height: 18%;
 }
 
-.node > {
-  height: 10%;
-  width: 10%;
+.node {
+  position: absolute;
+  /*height: 10%;*/
+  /*width: 10%;*/
 }
 
 .node-0 {
