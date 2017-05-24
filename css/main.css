@@ -147,9 +147,9 @@ img {
   -webkit-animation: theRotate 12s linear infinite;
 }
 
-img:hover{
+/*img:hover{
   -webkit-animation: unRotate 12s linear infinite;
-}
+}*/
 
 @-webkit-keyframes theRotate {
   0%{ -webkit-transform: rotate(0deg);   }
