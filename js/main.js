@@ -30,7 +30,9 @@ var secondClickedNode;
   // } else if(checkForFirstOrSecondClick() === true){
     if(checkForFirstOrSecondClick() === true){
     firstClickedNode = id;
-    console.log("first clicked node is: " + firstClickedNode);
+    // console.log("first clicked node is: " + firstClickedNode);
+    console.log("first clicked id is: " + id);
+
     console.log("The firstClickedNode is " + "node" + firstClickedNode);
       if (node.owner[firstClickedNode] === null) {
         firstClickedNode = null;
